@@ -1,0 +1,38 @@
+@import '../../../main.scss';
+
+.experience {
+    background-color: white;
+    overflow: hidden;
+    // font-family: 'Roboto';
+}
+
+.experience-title {
+    display: block;
+    text-align: center;
+    margin: 3em auto;
+}
+
+.job {
+    display: flex;
+    margin: 2em 1em;
+}
+
+.job-img {
+    // border: 1px solid black;
+    width: 80px;
+    height: 80px;
+    margin: 0 5em;
+    margin-right: 3em;
+}
+.job-noimg {
+    // border: 1px solid black;
+    // padding: 0;
+}
+
+.job-position, .job-company, .job-location, .job-duration {
+    margin: 0;
+}
+.job-duties {
+    padding-left: 20px;
+    padding-right: 120px;
+}

@@ -1,0 +1,16 @@
+@import '../../../main.scss';
+
+.contact {
+    padding: 3em;
+}
+
+.contact-title {
+    display: block;
+    margin: 3em auto;
+    text-align: center;
+}
+
+.log-form {
+    display: flex;
+    flex-direction: column;
+}

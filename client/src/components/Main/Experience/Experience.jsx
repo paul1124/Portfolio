@@ -43,7 +43,7 @@ export default function Experience() {
     ]
     return (
         <div className="experience">
-            <h2 className="experience-title">Experience</h2>
+            <h2 className="title">Experience</h2>
             {experience.map(experience => {
                 return (
                     <div className="job">

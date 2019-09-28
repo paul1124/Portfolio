@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from '@mdi/react';
-import Elephant from '../../../images/elephant.png';
+import Me from '../../../images/main_pic.jpg';
 import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean } from '@mdi/js';
 
 import './about.scss';
@@ -12,7 +12,7 @@ export default function About() {
 
             <div className="about-main">
                 <div className="about-main-image">
-                    <img src={Elephant} alt="random"/>
+                    <img src={Me} alt="me"/>
                 </div>
                 <p className="about-main-summary">
                     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel aliquam fuga, sequi beatae nam, eaque numquam facere distinctio corrupti consequatur, impedit voluptatem neque! Accusamus, delectus! Vero eligendi hic corporis, beatae qui deserunt, vel nihil quibusdam facilis cum alias, assumenda sapiente repellendus excepturi fuga sequi. Explicabo sapiente amet quas dolorem possimus.

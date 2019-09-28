@@ -1,4 +1,6 @@
 import React from 'react';
+import Icon from '@mdi/react';
+import { mdiLinkedinBox, mdiGithubCircle, mdiFileAccount } from '@mdi/js';
 import './background.scss';
 
 export default function Background({currentPage}) {
@@ -8,8 +10,21 @@ export default function Background({currentPage}) {
                 <figure className="background-image"></figure>
             </div>
             <div className="background-content">
-                <h2 className="background-title">Paul's Portfolio</h2>
-                <p className="background-description">Front-End Developer - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus sit laborum laboriosam. Expedita eligendi dicta sapiente praesentium possimus earum corrupti.</p>
+                <div className="background-content-container">
+                    <h2 className="background-title">Hey. I'm&nbsp;Paul.</h2>
+                    <p className="background-description">Front-End/Full-Stack Web&nbsp;Developer</p>
+                    <div className="background-links">
+                        <a href="https://www.linkedin.com/in/paulhong931124" className="background-link">
+                            <Icon path={mdiLinkedinBox} title="linkedIn" color="#F7F5E6" />
+                        </a>
+                        <a href="https://www.github.com/paul1124/" className="background-link">
+                            <Icon path={mdiGithubCircle} title="github" color="#F7F5E6" />
+                        </a>
+                        <a href="" className="background-link">
+                            <Icon path={mdiFileAccount} title="resume" color="#F7F5E6" />
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     )

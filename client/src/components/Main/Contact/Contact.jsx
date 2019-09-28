@@ -5,7 +5,7 @@ import './contact.scss';
 export default function Contact() {
     return (
         <div className="contact">
-            <h2 className="contact-title">Contact</h2>
+            <h2 className="title">Contact</h2>
             <p className="contact-introduction">For more information or potential collaboration, find me at my other accs! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, ullam. Or you can email me.</p>
             <div className="contact-log">
                 <p className="contact-log-introduction">If you're shy but still have an opinion, let me know what you think through this anonymous guest log.</p>

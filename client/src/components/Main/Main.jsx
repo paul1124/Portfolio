@@ -11,10 +11,12 @@ export default function Main() {
     return (
         <div className="main">
             <div className="home">
-                <h2 className="home-title">
-                    I'm a Front End Developer
-                </h2>
-                <p className="home-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis id, harum nobis corporis possimus aliquid facere laudantium ut! Autem voluptas tempora impedit corporis, natus ipsum reiciendis est iusto rerum libero.</p>
+                <div className="home-content">
+                    <h2 className="home-title">
+                        I'm a Front End Developer
+                    </h2>
+                    <p className="home-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis id, harum nobis corporis possimus aliquid facere laudantium ut! Autem voluptas tempora impedit corporis, natus ipsum reiciendis est iusto rerum libero.</p>
+                </div>
             </div>
 
             <About />

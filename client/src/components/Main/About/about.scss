@@ -1,3 +1,4 @@
+@import '../../../main.scss';
 .about {
     min-height: 100vh;
     width: 100%;
@@ -66,14 +67,14 @@
 }
 
 .about-tech-section {
-    border: 1px solid black;
+    border: 1px solid #999;
     width: 200px;
     border-radius: 20px;
 }
 
 .section-title {
     display: block;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #999;
     margin: 0.4em 0;
     padding-bottom: 0.4em;
 }

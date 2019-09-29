@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Icon from '@mdi/react';
 import { mdiLinkedinBox, mdiGithubCircle, mdiFileAccount } from '@mdi/js';
 import './background.scss';
 
-export default function Background({currentPage}) {
+export default function Background() {
+
+  const [ isReady, setIsReady ] = useState('100%');
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+  })
+
     return (
-        <div className="background">
+        <div className="background" onScroll={handleScroll} style={{width: isReady}}>
             <div className="background-image-container">
                 <figure className="background-image"></figure>
             </div>
@@ -28,4 +35,14 @@ export default function Background({currentPage}) {
             </div>
         </div>
     )
+
+
+  function handleScroll(e) {
+    if(window.scrollY < 700) {
+      setIsReady('100%');
+    } 
+    if(window.scrollY > 700) {
+      setIsReady('50%');
+    }
+  }
 }

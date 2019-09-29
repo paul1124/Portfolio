@@ -5,13 +5,17 @@
     font-family: 'Roboto Slab';
     position: fixed;
     height: 100vh;
-    width: 50%;
+    width: 100%;
     left: 0;
     top: 0;
+    transition: 0.5s width ease-in;
 
     &-image-container {
-        // background-color: $fresh;
-        background-image: linear-gradient(#999,rgba(0,0,0,.68)),url('../../images/main.jpeg');
+        // background-image: linear-gradient(#999,rgba(0,0,0,.68)),url('../../images/main.jpeg');
+        background-color: $fresh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         position: absolute;
         height: inherit;
         width: 100%;
@@ -23,11 +27,15 @@
         position: absolute;
         display: flex;
         color: $slightgrey;
+        color: black;
         &-container {
             align-self: center;
             margin-left: 10em;
         }
     }
+}
+.half {
+    width: 50%;
 }
 
 .background-title {

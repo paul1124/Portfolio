@@ -1,0 +1,63 @@
+@import '../../main.scss';
+
+.home-content {
+    width: 100%;
+    height: 100vh;
+    background-color: $altwhite;
+    overflow: hidden;
+}
+
+.home-image {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: inherit;
+    background-image: linear-gradient(rgba(68, 68, 68, 0.68),rgba(0, 0, 0, 0.68)),url('../images/main.jpeg');
+    background-size: cover;
+    background-position: right;
+    
+}
+
+.home-main {
+    text-align: right;
+    position: relative;
+    width: 100%;
+    height: inherit;
+    z-index: 2;
+    display: flex;
+    &-content {
+        width: 80%;
+        color: $altwhite;
+        align-self: center;
+    }
+}
+
+.home {
+    
+    &-title {
+        font-size: 2.75em;
+        font-weight: 500;
+    }
+    &-subtitle {
+        font-size: 1.5em;
+    }
+}
+
+.home-links {
+    color: $altwhite;
+    font-size: 1.25em;
+    list-style-type: none;
+}
+
+.home-link {
+    display: inline-block;
+}
+.home-link-item {
+    font-size: 2em;
+    margin-left: 2em;
+    color: $altwhite;
+    &:hover {
+        color: $main;
+        transition: color 0.1s ease-in;
+    }
+}

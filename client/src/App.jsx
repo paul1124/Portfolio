@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import Background from './components/Background/Background';
-import Navbar from './components/Navbar/Navbar';
-import Main from './components/Main/Main';
+import React from 'react';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
-  const [ currentPage, setCurrentPage ] = useState('');
 
   return (
     <div className="app">
-      <Background currentPage={currentPage} />
-      {/* <Navbar /> */}
-      <Main />
+        <Home />
     </div>
   );
 }

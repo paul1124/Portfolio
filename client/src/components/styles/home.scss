@@ -14,19 +14,20 @@
     height: inherit;
     background-image: linear-gradient(rgba(68, 68, 68, 0.68),rgba(0, 0, 0, 0.68)),url('../images/main.jpeg');
     background-size: cover;
-    background-position: right;
+    background-position: left;
     
 }
 
 .home-main {
-    text-align: right;
+    text-align: center;
     position: relative;
     width: 100%;
     height: inherit;
     z-index: 2;
     display: flex;
     &-content {
-        width: 80%;
+        width: 30%;
+        margin: 0 auto;
         color: $altwhite;
         align-self: center;
     }
@@ -35,26 +36,86 @@
 .home {
     
     &-title {
-        font-size: 2.75em;
+        font-size: 3.5em;
         font-weight: 500;
+        text-transform: uppercase;
     }
     &-subtitle {
         font-size: 1.5em;
+        display: inline-block;
+        padding: 0 3em;
+        padding-bottom: 0.25em;
+        border-bottom: 1px solid $altwhite;
+        // background: red;
+    }
+}
+.home-hr {
+    background-color: $altwhite;
+    height: 3em;
+    width: 0.5px;
+    margin: 0 auto;
+}
+.home-hr-2nd {
+    background-color: $altwhite;
+    height: 4em;
+    width: 0.5px;
+    margin: 0 auto;
+}
+.home-sub-content {
+    // margin: 3em 0 5em 0;
+    // margin-bottom: 5em;
+}
+.home-nav {
+    display: flex;
+    justify-content: center;
+}
+.home-nav li {
+    flex: 1;
+    display: inline-block;
+    font-size: 1.35em;
+    border: 1px solid $altwhite;
+    a {
+        display: block;
+        padding: 0.5em 0;
+        color: $altwhite;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            cursor: pointer;
+            background-color: $main;
+        }
     }
 }
 
 .home-links {
     color: $altwhite;
     font-size: 1.25em;
-    list-style-type: none;
+    border-top: 1px solid $altwhite;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 0.5em;
 }
 
 .home-link {
     display: inline-block;
+    // width: 2em;
+    // background: red;
+}
+.home-link-hr {
+    display: inline-block;
+    width: 4em;
+    margin: auto;
+    margin-bottom: 0.5em;
+    // background: red;
 }
 .home-link-item {
+    // height: inherit;
+    // background: red;
+    // border-radius: 100px;
+    // border: 1px solid $altwhite;
     font-size: 2em;
-    margin-left: 2em;
     color: $altwhite;
     &:hover {
         color: $main;

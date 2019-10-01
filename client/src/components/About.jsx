@@ -9,6 +9,7 @@ export default function About() {
     return (
         <div id="about" className="about">
             <div className="about-intro">
+                <img className="about-img" src="" alt="main"/>
                 <p className="about-introduction">I design and develop simple and clean websites, and I love what I do.</p>
             </div>
             <div className="about-main">

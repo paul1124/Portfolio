@@ -1,5 +1,14 @@
 @import '../../main.scss';
 
+.home {
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
 .home-content {
     width: 100%;
     height: 100vh;
@@ -14,11 +23,11 @@
     height: inherit;
     background-image: linear-gradient(rgba(68, 68, 68, 0.68),rgba(0, 0, 0, 0.68)),url('../images/main.jpeg');
     background-size: cover;
-    background-position: left;
-    
+    background-position: center;
 }
 
 .home-main {
+    transition: all 0.1s ease-in-out;
     text-align: center;
     position: relative;
     width: 100%;
@@ -61,10 +70,6 @@
     width: 0.5px;
     margin: 0 auto;
 }
-.home-sub-content {
-    // margin: 3em 0 5em 0;
-    // margin-bottom: 5em;
-}
 .home-nav {
     display: flex;
     justify-content: center;
@@ -83,6 +88,7 @@
         &:hover {
             cursor: pointer;
             background-color: $main;
+            transition: background-color 0.1s ease-in;
         }
     }
 }
@@ -108,13 +114,8 @@
     width: 4em;
     margin: auto;
     margin-bottom: 0.5em;
-    // background: red;
 }
 .home-link-item {
-    // height: inherit;
-    // background: red;
-    // border-radius: 100px;
-    // border: 1px solid $altwhite;
     font-size: 2em;
     color: $altwhite;
     &:hover {

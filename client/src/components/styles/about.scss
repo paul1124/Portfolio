@@ -1,0 +1,11 @@
+@import '../../main.scss';
+
+.about {
+    z-index: 1;
+    margin-top: 100vh;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    background: yellow;
+    width: 70%;
+}

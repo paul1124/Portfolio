@@ -3,6 +3,8 @@ import AboutImg from './images/about/main_pic.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import Icon from '@mdi/react';
+import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean } from '@mdi/js';
 
 import './styles/about.scss';
 
@@ -17,6 +19,45 @@ export default function About() {
                 </div>
             </div>
             <div className="about-main">
+            <div className="about-grid">
+                <div className="grid-section grid-item-1">
+                    <figure className="grid-section-figure">
+                        <Icon size={1} path={mdiAirplay} title="web-application" color="" />
+                    </figure>
+                    <figcaption className="grid-section-figcaption">
+                        <strong>Web Application</strong><br/>
+                        This is figcaption section
+                    </figcaption>
+                </div>
+                <div className="grid-section grid-item-2">
+                    <figure className="grid-section-figure">
+                        <Icon size={1} path={mdiResponsive} title="airplay" />
+                    </figure>
+                    <figcaption className="grid-section-figcaption">
+                        <strong>Responsiveness</strong><br/>
+                        This is figcaption section
+                    </figcaption>
+                </div>
+                <div className="grid-section grid-item-3">
+                    <figure className="grid-section-figure">
+                        <Icon size={1} path={mdiTelevisionGuide} title="airplay" />
+                    </figure>
+                    <figcaption className="grid-section-figcaption">
+                        <strong>UI/UX</strong><br/>
+                        This is figcaption section
+                    </figcaption>
+                </div>
+                <div className="grid-section grid-item-4">
+                    <figure className="grid-section-figure">
+                        <Icon size={1} path={mdiMonitorClean} title="airplay" />
+                    </figure>
+                    <figcaption className="grid-section-figcaption">
+                        <strong>Clean and Minimalistic</strong><br/>
+                        This is figcaption section
+                    </figcaption>
+                </div>
+            </div>
+
             </div>
         </div>
     )

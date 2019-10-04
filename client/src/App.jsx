@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Home from './components/Home';
 import About from './components/About';
+import Project from './components/Project';
 import './App.css';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
     <div className="app">
         <Home />
         <About />
+        <Project />
     </div>
   );
 

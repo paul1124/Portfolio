@@ -1,0 +1,81 @@
+@import '../../main.scss';
+
+.projects {
+    z-index: 1;
+    min-height: 100vh;
+    position: relative;
+    float: right;
+    background: yellow;
+    width: 70%;
+    overflow: hidden;
+}
+
+.projects-title {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.project {
+    width: 80%;
+    background: #999;
+    border: 1px solid black;
+    margin: 1em auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.project-img {
+    border-radius: 10px;
+    width: 40em;
+    height: 21em;
+    flex: 2;
+}
+
+.project-main {
+    flex: 1;
+    background: green;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+}
+
+.project-techstacks {
+    list-style-type: none;
+    // padding: 0 1em;
+    position: absolute;
+    right: 0; 
+    left: 0;
+    bottom: 7em;
+    
+    li {
+        display: inline-block;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 0.25em;
+        padding: 0.1em 0.5em;
+        background-color: $main;
+    }
+}
+
+.project {
+    &-description {
+        margin: 1em 0;
+    }
+    &-preview, &-code {
+        text-decoration: none;
+        color: $altwhite;
+        display: block;
+        position: absolute;
+    }
+    &-preview {
+        bottom: 3em;
+        left: 4em;
+    }
+    &-code {
+        bottom: 3em;
+        right: 4em;
+    }
+}

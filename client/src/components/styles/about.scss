@@ -2,10 +2,12 @@
 
 .about {
     z-index: 1;
-    height: 100vh;
-    position: absolute;
+    min-height: 100vh;
+    position: relative;
+    float: right;
     margin-top: 100vh;
     right: 0;
+    overflow: hidden;
     width: 70%;
 }
 
@@ -40,6 +42,57 @@
 }
 
 .about-grid {
+    margin-top: 3em;
     display: grid;
-    // grid-template-columns: 
+    grid-template-columns: 1fr 1fr;
+}
+.grid-section {
+    text-align: center;
+    border: 1px solid;
+}
+.grid-section-figure {
+    margin: 2em auto;
+    width: 27%;
+}
+.about-skills {
+    overflow: hidden;
+    width: 100%;
+    text-align: center;
+    padding-top: 4em;
+}
+.skills-columns {
+    width: 80%;
+    display: flex;
+    margin: 3em auto;
+    justify-content: space-around;
+    // justify-content: center;
+}
+
+.skill-column {
+    flex: 1;
+    border: 1px solid black;
+    &:first-child {
+        border-radius: 10px 0 0 10px;
+    }
+    &:last-child {
+        border-radius: 0 10px 10px 0;
+    }
+}
+
+.skill-column {
+    &-title {
+        display: block;
+        margin: 1em 0;
+        margin-bottom: 0;
+        border-bottom: 1px solid black;
+        padding-bottom: 1em;
+
+    }
+    &-content {
+        list-style-type: none;
+        padding: 1.5em 0;
+        li {
+            margin: 0.5em 0;
+        }
+    }
 }

@@ -1,0 +1,85 @@
+@import '../../main.scss';
+
+.contact {
+    z-index: 1;
+    min-height: 100vh;
+    position: relative;
+    float: right;
+    // font-family: 'Lato'; 
+    // background: $dark;
+    width: 70%;
+    overflow: hidden;
+}
+.modal-buttons {
+    width: 100%;
+    .toggle-modal {
+        width: 50%;
+        font-size: 1.75em;
+        padding: 0.5em 0;
+        background-color: $altwhite;
+        font-family: 'Lato';
+        text-transform: uppercase;
+        color: $dark;
+        border: none;
+        // border-bottom: 1px solid #4a4a4a;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.contact-modal {
+    width: 60%;
+    background-color: white;
+    color: $softgray;
+    border: 1px solid $softgray;
+    border-radius: 50px;
+    overflow: hidden;
+    margin: 2em auto;
+}
+
+.form {
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    // margin: 2em;
+    padding: 3em;
+
+    &-title {
+        font-family: 'Lato';
+        margin: 1em 0;
+        font-size: 1.25em;
+    }
+    &-input {
+        font-size: 1em;
+        padding: 0.25em;
+
+        border: 1px solid $softgray;    
+    }
+    &-textarea {
+        padding: 0.25em;
+        font-size: 0.9em;
+        height: 10em;
+        margin-bottom: 0.5em;
+        border: 1px solid $softgray;
+    }
+    // input[type=submit] {
+    &-submit {
+        font-family: 'Lato';
+        font-size: 1.25em;
+        background-color: $main;
+        color: $altwhite;
+        border: none;
+        width: 5em;
+        margin: 1em 0;
+        margin-left: auto;
+        padding: 0.25em 1em;
+        border-radius: 5px;
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: $main;
+        }
+    }
+}

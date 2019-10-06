@@ -29,8 +29,8 @@
 
 .project-img {
     border-radius: 10px;
-    width: 40em;
-    height: 21em;
+    width: 30em;
+    height: 19em;
     flex: 2;
 }
 
@@ -44,7 +44,6 @@
 
 .project-techstacks {
     list-style-type: none;
-    // padding: 0 1em;
     position: absolute;
     right: 0; 
     left: 0;
@@ -72,10 +71,10 @@
     }
     &-preview {
         bottom: 3em;
-        left: 4em;
+        left: 3em;
     }
     &-code {
         bottom: 3em;
-        right: 4em;
+        right: 3em;
     }
 }

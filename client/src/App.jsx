@@ -3,6 +3,7 @@ import Home from './components/Home';
 import About from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
+import Guestbook from './components/Guestbook';
 import './App.css';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Home />
         <About />
         <Project />
+        <Guestbook />
         <Contact />
     </div>
   );

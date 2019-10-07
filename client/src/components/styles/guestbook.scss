@@ -1,0 +1,11 @@
+@import '../../main.scss';
+
+.guestbook-list {
+    z-index: 1;
+    min-height: 100vh;
+    position: relative;
+    float: right;
+    background: yellow;
+    width: 70%;
+    overflow: hidden;
+}

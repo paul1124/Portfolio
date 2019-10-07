@@ -5,9 +5,9 @@ import { faSearch, faCode } from '@fortawesome/free-solid-svg-icons';
 
 function importAll(r) {
     let images = {};
-    r.keys().map((item, index) => {
-      images[item.replace('./', '')] = r(item);
-    });
+    r.keys().map((item, index) => 
+      images[item.replace('./', '')] = r(item)
+    );
     return images;
   }
 const images = importAll(require.context('./images/project/', false, /\.(png|jpg|jpeg|svg)$/));
@@ -47,14 +47,14 @@ export default function Project() {
             <h2 className="projects-title">Projects</h2>
             {projects.map(project => {
                 return (
-                    <div className="project">
+                    <div className="project" key={project.name}>
                         <img className="project-img" src={project.img} alt={project.name}/>
                         <div className="project-main">
                             <h2 className="project-name">{project.name}</h2>
                             <p className="project-description">{project.description}</p>
                             <ul className="project-techstacks">
                                 {project.mainTech.map(tech => 
-                                    <li>{tech}</li>
+                                    <li key={tech}>{tech}</li>
                                 )}
                             </ul>
                             <a className="project-preview" href={project.view}><FontAwesomeIcon icon={faSearch}/> Preview Project</a>

@@ -17,4 +17,10 @@ router.route('/add').post((req, res) => {
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
+router.route('/:id').delete((req, res) => {
+    Post.findByIdAndDelete(req.params.id)
+        .then(() => res.json('Post deleted'))
+        .catch(err => res.status(400).json('Error: ' + err));
+})
+
 module.exports = router;

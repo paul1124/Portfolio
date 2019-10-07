@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const moment = require('moment');
+
+const utcDate = moment.utc().toDate();
 
 const Schema = mongoose.Schema;
 
@@ -12,7 +15,8 @@ const postSchema = new Schema({
         type: String,
         required: true
     }
-}, {
+}
+, {
     timestamps: true,
 }
 );

@@ -57,8 +57,8 @@ export default function Project() {
                                     <li key={tech}>{tech}</li>
                                 )}
                             </ul>
-                            <a className="project-preview" href={project.view}><FontAwesomeIcon icon={faSearch}/> Preview Project</a>
-                            <a href={project.code} className="project-code"><FontAwesomeIcon icon={faCode}/> Source Code</a>
+                            <a className="project-preview" href={project.view}><FontAwesomeIcon icon={faSearch}/> Preview</a>
+                            <a href={project.code} className="project-code"><FontAwesomeIcon icon={faCode}/> Source</a>
                         </div>
                     </div>
                 )

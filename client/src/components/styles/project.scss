@@ -5,7 +5,6 @@
     min-height: 100vh;
     position: relative;
     float: right;
-    background: yellow;
     width: 70%;
     overflow: hidden;
 }
@@ -19,7 +18,6 @@
 
 .project {
     width: 80%;
-    background: #999;
     border: 1px solid black;
     margin: 1em auto;
     display: flex;
@@ -36,7 +34,6 @@
 
 .project-main {
     flex: 1;
-    background: green;
     text-align: center;
     padding: 1em;
     position: relative;
@@ -55,7 +52,7 @@
         border-radius: 5px;
         margin: 0.25em;
         padding: 0.1em 0.5em;
-        background-color: $main;
+        // background-color: $main;
     }
 }
 
@@ -66,6 +63,7 @@
     &-preview, &-code {
         text-decoration: none;
         color: $altwhite;
+        color: black;
         display: block;
         position: absolute;
     }

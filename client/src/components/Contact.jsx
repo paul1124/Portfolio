@@ -22,7 +22,7 @@ export default function Contact() {
                 {
                     isEmail ? (
                         <div className="email">
-                            <form className="form">
+                            <form className="form" action="mailto:paulhong1124@gmail.com">
                                 <label htmlFor="" className="form-title">Name</label>
                                 <input type="text" className="form-input" required/>
                                 <label htmlFor="" className="form-title">Email</label>
@@ -30,6 +30,7 @@ export default function Contact() {
                                 <label htmlFor="" className="form-title">Message</label>
                                 <textarea name="" id="" cols="30" rows="10" className="form-textarea" required></textarea>
                                 <input type="submit" value="Send" className="form-submit"/>
+                                <input type="reset" value="reset" className="form-submit"/>
                             </form>
                         </div>  
                     ) : (
@@ -75,6 +76,8 @@ export default function Contact() {
         axios.post('http://localhost:5000/posts/add', post)
             .then(() => console.log('Post added!'));
             // .catch(err => res.status(400).json('Error: ' + err));
+
+        window.location = '/';
     }
 
 }

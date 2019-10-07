@@ -19,10 +19,20 @@ export default function Guestbook() {
                         <div className="post" key={post._id}>
                             <h2 className="post-name">{post.name}</h2>
                             <p className="post-message">{post.message}</p>
+                            {/* <p className="post-date">{post.createdAt.substr(0, 10)}</p>
+                            <p className="post-time">{post.createdAt.substr(11, 19)}</p> */}
+                            {/* <a href="#" onClick={() => handleDelete(post._id)}>Delete</a> */}
                         </div>
                     )
                 })}
             </div>
         </div>
     )
+
+    // function handleDelete(id) {
+    //     axios.delete('http://localhost:5000/posts/' + id)
+    //         .then(res => console.log(res.data));
+    //     setPosts(posts.filter(post => post._id !== id));
+    //         // .catch(err => res.status(400).json('Error: ' + err));
+    // }
 }

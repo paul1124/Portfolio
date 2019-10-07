@@ -18,7 +18,7 @@ export default function Home() {
             <div className="home-content">
                 <figure className="home-image"></figure>
                 <div className="home-main" style={{opacity: isMain ? 0 : 1}}>
-                    <div className="home-main-content">
+                    {/* <div className="home-main-content">
                         <h2 className="home-title">
                             Paul Hong
                         </h2>
@@ -54,6 +54,14 @@ export default function Home() {
                                 </a>
                             </li>
                         </ul>
+                    </div> */}
+                    <div className="home-main-content">
+                        <h2 className="home-title">
+                            Paul Hong
+                        </h2>
+                        <h4 className="home-subtitle">
+                            <div className="home-subtitle-underline">Full Stack Developer</div>
+                        </h4>
                     </div>
                 </div>
             </div>

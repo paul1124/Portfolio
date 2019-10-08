@@ -1,18 +1,14 @@
 @import '../../main.scss';
 
 .home {
-    z-index: 10;
+    position: relative;
     transition: all 0.5s ease-in-out;
-    position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
 }
 
 .home-content {
     width: 100%;
     height: 100vh;
-    background-color: $altwhite;
     overflow: hidden;
 }
 
@@ -27,7 +23,6 @@
 }
 
 .home-main {
-    transition: all 0.1s ease-in-out;
     text-align: center;
     position: relative;
     width: 100%;
@@ -39,46 +34,43 @@
         color: $altwhite;
         align-self: center;
         padding: 4em;
-        // border: 1px solid $altwhite;
     }
-}
-
-.home-main-content {
-    position: relative;
 }
 @keyframes hvr-ripple-in {
     100% {
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      opacity: 1;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: 1;
     }
-  }
-  .home-main-content {
+}
+.home-main-content {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     position: relative;
-  }
-  .home-main-content:before {
+}
+.home-main-content:before {
     content: '';
     position: absolute;
-    border: #e1e1e1 solid 4px;
-    top: -12px;
-    right: -12px;
-    bottom: -12px;
-    left: -12px;
+    border: #e1e1e1 solid 1px;
+    top: -20px;
+    right: -20px;
+    bottom: -20px;
+    left: -20px;
     opacity: 0;
+    animation: hvr-ripple-in;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
-  }
-  .home-main-content:hover:before, .home-main-content:focus:before, .home-main-content:active:before {
-    -webkit-animation-name: hvr-ripple-in;
-    animation-name: hvr-ripple-in;
-  }
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+
 .home {
     
     &-title {

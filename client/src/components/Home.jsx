@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
@@ -8,13 +8,8 @@ const mainStyle = {
     width: 30 + '%'
 }
 export default function Home() {
-    const [ isMain, setIsMain ] = useState(false);
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  })
     return (
-        <section id="home" className="home" style={isMain ? mainStyle : null}>
+        <section id="home" className="home">
             <div className="home-content">
                 <figure className="home-image"></figure>
                 <div className="home-main">
@@ -30,12 +25,4 @@ export default function Home() {
             </div>
         </section>
     )
-
-  function handleScroll(e) {
-    if(window.scrollY < 700) {
-      setIsMain(false);
-    } else if(window.scrollY > 700) {
-      setIsMain(true);
-    }
-  }
 }

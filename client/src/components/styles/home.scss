@@ -39,10 +39,46 @@
         color: $altwhite;
         align-self: center;
         padding: 4em;
-        border: 1px solid $altwhite;
+        // border: 1px solid $altwhite;
     }
 }
 
+.home-main-content {
+    position: relative;
+}
+@keyframes hvr-ripple-in {
+    100% {
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 1;
+    }
+  }
+  .home-main-content {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+  }
+  .home-main-content:before {
+    content: '';
+    position: absolute;
+    border: #e1e1e1 solid 4px;
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+  }
+  .home-main-content:hover:before, .home-main-content:focus:before, .home-main-content:active:before {
+    -webkit-animation-name: hvr-ripple-in;
+    animation-name: hvr-ripple-in;
+  }
 .home {
     
     &-title {

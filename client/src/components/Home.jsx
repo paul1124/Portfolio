@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
+import { faFilePdf, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
 import './styles/home.scss';
 
 export default function Home() {
@@ -37,7 +37,10 @@ export default function Home() {
                             </ul>
                         </div>
                     </div>
-
+                    
+                </div>
+                <div className="down-container">
+                <a href="#about" className="down"><FontAwesomeIcon icon={faAngleDoubleDown} /></a>
                 </div>
             </div>
         </section>

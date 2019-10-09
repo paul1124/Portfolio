@@ -10,7 +10,7 @@ export default function Guestbook() {
             .catch(err => console.log(err));
     }, []);
     return (
-        <div className="guestbook-list">
+        <section className="guestbook-list" id="guestbook">
             <h2 className="guestbook-title">Guest Bdook</h2>
             <p className="guestbook-description">Here's what they said about me</p>
             <div className="guestbook-container">
@@ -26,7 +26,7 @@ export default function Guestbook() {
                     )
                 })}
             </div>
-        </div>
+        </section>
     )
 
     // function handleDelete(id) {

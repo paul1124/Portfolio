@@ -53,7 +53,7 @@ const projects = [
 
 export default function Project() {
     return (
-        <div className="projects">
+        <section className="projects" id="project">
             <h2 className="projects-title">Projects</h2>
             <div className="project-container">
                 {projects.map(project => {
@@ -70,6 +70,6 @@ export default function Project() {
                     )
                 })}
             </div>
-        </div>
+        </section>
     )
 }

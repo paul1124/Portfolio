@@ -5,6 +5,15 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    background-color: $dark;
+}
+
+.contact-title {
+    text-align: center;
+    color: $altwhite;
+    margin: 3em 0;
+    font-size: 2em;
+    text-transform: uppercase;
 }
 .modal-buttons {
     width: 100%;
@@ -25,35 +34,40 @@
 }
 
 .contact-modal {
-    width: 60%;
+    width: 40%;
     background-color: white;
-    color: $softgray;
+    color: $altwhite;
     border: 1px solid $softgray;
-    border-radius: 50px;
+    // border-radius: 50px;
     overflow: hidden;
     margin: 2em auto;
 }
 
 .form {
-    height: 35em;
-    display: flex;
-    flex-direction: column;
+    background-color: $softgray;
+    height: 23em;
+    // display: flex;
+    // flex-direction: column;
     justify-content: space-around;
     // margin: 2em;
     padding: 3em;
+    position: relative;
 
     &-title {
         font-family: 'Lato';
-        margin: 1em 0;
+        margin: 0.4em 0;
         font-size: 1.25em;
+        display: block;
     }
     &-input {
+        width: 100%;
         font-size: 1em;
         padding: 0.25em;
-
+        display: block;
         border: 1px solid $softgray;    
     }
     &-textarea {
+        width: 100%;
         padding: 0.25em;
         font-size: 0.9em;
         height: 10em;
@@ -62,6 +76,9 @@
     }
     // input[type=submit] {
     &-submit {
+        position: absolute;
+        bottom: 1em;
+        right: 2em;
         font-family: 'Lato';
         font-size: 1.25em;
         background-color: $main;

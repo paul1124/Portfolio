@@ -3,24 +3,24 @@ import axios from 'axios';
 import './styles/contact.scss';
 
 const selected = {
-    backgroundColor: 'rgb(255, 95, 95)'
+    backgroundColor: 'rgb(121, 207, 247)'
 };
 
 export default function Contact() {
-    const [ isEmail, setIsEmail ] = useState(true);
+    const [ isEmail, setIsEmail ] = useState('email');
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
 
     return (
-        <div className="contact" id="contact">
+        <section className="contact" id="contact">
             <h2 className="contact-title">Contact</h2>
             <div className="contact-modal">
                 <div className="modal-buttons">
-                    <button onClick={handleClick} style={isEmail ? selected : null} className="toggle-modal">Email</button>
-                    <button onClick={handleClick} style={!isEmail ? selected : null} className="toggle-modal">Guest Book</button>
+                    <button onClick={clickEmail} style={isEmail === 'email' ? selected : null} className="toggle-modal">Email</button>
+                    <button onClick={clickGuestbook} style={isEmail === 'guestbook' ? selected : null} className="toggle-modal">Guest Book</button>
                 </div>
                 {
-                    isEmail ? (
+                    isEmail === 'email' ? (
                         <div className="email">
                             <form className="form" action="mailto:paulhong1124@gmail.com">
                                 <label htmlFor="" className="form-title">Name</label>
@@ -30,7 +30,7 @@ export default function Contact() {
                                 <label htmlFor="" className="form-title">Message</label>
                                 <textarea name="" id="" cols="30" rows="10" className="form-textarea" required></textarea>
                                 <input type="submit" value="Send" className="form-submit"/>
-                                <input type="reset" value="reset" className="form-submit"/>
+                                {/* <input type="reset" value="reset" className="form-submit"/> */}
                             </form>
                         </div>  
                     ) : (
@@ -46,11 +46,15 @@ export default function Contact() {
                     )
                 }
             </div>
-        </div>
+        </section>
     )
-    function handleClick(e) {
+    function clickEmail(e) {
         e.preventDefault();
-        setIsEmail(!isEmail);
+        setIsEmail('email');
+    }
+    function clickGuestbook(e) {
+        e.preventDefault();
+        setIsEmail('guestbook');
     }
     function handleNameChange(e) {
         setName(e.target.value);

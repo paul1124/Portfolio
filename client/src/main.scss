@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto+Slab|Lato');
 @import url("https://use.typekit.net/ojv4ekx.css");
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +16,7 @@ $dark: rgba(0,0,0,0.8);
 $ldark: #000;
 $altwhite: #fafafa;
 $softgray: rgb(161, 161, 161);
-$main: rgb(255, 95, 95);
+$main: rgb(121, 207, 247);
 
 .main-color {
     color: $main;

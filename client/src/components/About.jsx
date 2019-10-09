@@ -7,7 +7,7 @@ import './styles/about.scss';
 
 export default function About() {
     return (
-        <div id="about" className="about">
+        <section id="about" className="about">
             <div className="about-intro">
                 <img className="about-img" src={AboutImg} alt="main"/>
                 <div className="about-introduction">
@@ -86,6 +86,6 @@ export default function About() {
                     </div>
                 </div>
             </div> */}
-        </div>
+        </section>
     )
 }

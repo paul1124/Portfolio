@@ -26,10 +26,10 @@ export default function Home() {
                         <div className="home-links">
                             <ul className="home-links-container">
                                 <li className="home-link">
-                                    <a href=""><FontAwesomeIcon icon={faGithub} /></a>
+                                    <a href="https://www.github.com/paul1124" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
                                 </li>
                                 <li className="home-link">
-                                    <a href=""><FontAwesomeIcon icon={faLinkedin} /></a>
+                                    <a href="https://www.linkedin.com/in/paulhong931124" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
                                 </li>
                                 <li className="home-link">
                                     <a href=""><FontAwesomeIcon icon={faFilePdf} /></a>

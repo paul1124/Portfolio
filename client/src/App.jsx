@@ -19,7 +19,7 @@ function App() {
         <Home />
         <About />
         <Project />
-        <Guestbook />
+        {/* <Guestbook /> */}
         <Contact />
         <Footer/>
     </div>

@@ -36,6 +36,8 @@
     top: 1.25em;
     padding: 1.5em;
     text-align: center;
+    color: $main;
+    text-transform: uppercase;
 }
 .nav-divider {
     position: absolute;
@@ -60,7 +62,8 @@
             text-transform: uppercase;
             text-decoration: none;
             color: $altwhite;
-            border-bottom: 1px solid $dark;
+            border-bottom: 1px solid transparent;
+            padding-bottom: 0.25em;
             &:hover {
                 transition: 0.25s all ease-in-out;
                 color: $main;
@@ -96,7 +99,8 @@
     background: none;
     border: none;
     margin-left: 0.5em;
-    color: $altwhite;
+    color: $main;
+    padding-right: 0.5em;
     
     &:hover {
         cursor: pointer;

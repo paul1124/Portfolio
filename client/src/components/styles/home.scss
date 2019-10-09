@@ -161,6 +161,10 @@
       a {
         text-decoration: none;
         color: $altwhite;
+        &:hover {
+          color: $main;
+          transition: all 0.25s ease-in-out;
+        }
       }
     }
   }
@@ -260,6 +264,8 @@
   -webkit-animation-direction: normal, alternate;
   animation-direction: normal, alternate;
   &:hover {
+    color: $main;
+    transition: 0.5s all ease-in-out;
     cursor: pointer;
   }
 }

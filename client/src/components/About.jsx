@@ -12,49 +12,48 @@ export default function About() {
                 <img className="about-img" src={AboutImg} alt="main"/>
                 <div className="about-introduction">
                     <h2 className="introduction-heading">Hey. I'm Paul.</h2>
-                    <p className="introduction-message">I design and develop simple and clean websites, and I love what I do. I'm always looking for opportunities to learn something as well as use what I have to design the best website. I've taken different routes to pursue throughout my whole life, and right now I'm fixated on full-stack development.</p>
+                    <p className="introduction-message">I design and develop simple and clean websites, and I love what I do. <br/>I'm always looking for opportunities to learn something as well as use what I have to design the best website. I've taken different routes to pursue throughout my whole life, and right now I'm fixated on full-stack development.</p>
                 </div>
             </div>
-            {/* <div className="about-main"> */}
             <div className="about-grid">
                 <div className="grid-section">
                     <figure className="grid-section-figure">
-                        <Icon path={mdiAirplay} title="" />
+                        <Icon path={mdiAirplay} title="" size={3} />
                     </figure>
                     <figcaption className="grid-section-figcaption">
                         <strong>Web Application</strong><br/>
-                        Lorem ipsum, dolor sit amet consectetasdfawefqwur adipisicing elit. Ducimus, quaerat.
+                        Take control of what you see on your web page by manipulating the data yourself.
                     </figcaption>
                 </div>
                 <div className="grid-section">
                     <figure className="grid-section-figure">
-                        <Icon path={mdiResponsive} title="" />
+                        <Icon path={mdiResponsive} title="" size={3} />
                     </figure>
                     <figcaption className="grid-section-figcaption">
                         <strong>Responsiveness</strong><br/>
-                        Lorem ipsum, dolor sit amet consectasdfawefqwetur adipisicing elit. Ducimus, quaerat.
+                        View your web contents not only on your PC, but also on your tablets or phones.
                     </figcaption>
                 </div>
                 <div className="grid-section">
                     <figure className="grid-section-figure">
-                        <Icon path={mdiTelevisionGuide} title="" />
+                        <Icon path={mdiTelevisionGuide} title="" size={3} />
                     </figure>
                     <figcaption className="grid-section-figcaption">
                         <strong>UI/UX</strong><br/>
-                        Lorem ipsum, dolor sit amet consectasdfawefqwetur adipisicing elit. Ducimus, quaerat.
+                        Your website is your website. Experience efficient accessibility with a touch of aesthetics.
                     </figcaption>
                 </div>
                 <div className="grid-section">
                     <figure className="grid-section-figure">
-                        <Icon path={mdiMonitorClean} title="" />
+                        <Icon path={mdiMonitorClean} title="" size={3} />
                     </figure>
                     <figcaption className="grid-section-figcaption">
                         <strong>Clean and Minimalistic</strong><br/>
-                        Lorem ipsum, dolor sit amet consectasdfawefqwetur adipisicing elit. Ducimus, quaerat.
+                        Less is more. Cleanliness and conciseness bring more refined tone to your websites.
                     </figcaption>
                 </div>
             </div>
-            <div className="about-skills">
+            {/* <div className="about-skills">
                 <h2 className="skills-title">Tech Stacks</h2>
                 <div className="skills-columns">
                     <div className="skill-column">
@@ -86,8 +85,7 @@ export default function About() {
                         </ul>
                     </div>
                 </div>
-            </div>
-            {/* </div> */}
+            </div> */}
         </div>
     )
 }

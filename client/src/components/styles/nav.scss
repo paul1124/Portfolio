@@ -1,0 +1,32 @@
+@import '../../main.scss';
+
+.nav {
+    height: 90vh;
+    width: 20em;
+    position: fixed;
+    left: 0;
+    top: 5vh;
+    bottom: 5vh;
+    z-index: 100000;
+    color: $altwhite;
+    display: flex;
+}
+.nav-main {
+    width: 100%;
+    background: $dark;
+    border-radius: 0 10px 10px 0;
+    transition: 1s all ease-in-out;
+}
+
+.nav-toggle {
+    // position: absolute;
+    font-size: 2em;
+    // margin-left: 2em;
+    align-self: center;
+    background: none;
+    border: none;
+    margin-left: 0.1em;
+    &:hover {
+        cursor: pointer;
+    }
+}

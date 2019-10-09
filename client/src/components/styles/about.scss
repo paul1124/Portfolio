@@ -8,13 +8,14 @@
 }
 
 .about-intro {
-    width: 80%;
+    width: 60%;
     margin: 0 auto;
     margin-top: 8em;
     display: flex;
 
     .about-img {
-        width: 15em;
+        max-width: 15em;
+        height: 15em;
         border-radius: 200px;
     }
 }
@@ -38,17 +39,23 @@
 }
 
 .about-grid {
-    margin-top: 3em;
+    margin: 0 auto;
+    width: 75%;
+    margin-top: 5em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .grid-section {
     text-align: center;
-    border: 1px solid;
+    padding: 1em;
 }
 .grid-section-figure {
-    margin: 2em auto;
+    margin: 0 auto;
     width: 27%;
+}
+.grid-section-figcaption {
+    margin: 0 auto;
+    margin-top: 1em;
 }
 .about-skills {
     overflow: hidden;
@@ -66,13 +73,13 @@
 
 .skill-column {
     flex: 1;
-    border: 1px solid black;
-    &:first-child {
-        border-radius: 10px 0 0 10px;
-    }
-    &:last-child {
-        border-radius: 0 10px 10px 0;
-    }
+    // border: 1px solid black;
+    // &:first-child {
+    //     border-radius: 10px 0 0 10px;
+    // }
+    // &:last-child {
+    //     border-radius: 0 10px 10px 0;
+    // }
 }
 
 .skill-column {
@@ -80,7 +87,7 @@
         display: block;
         margin: 1em 0;
         margin-bottom: 0;
-        border-bottom: 1px solid black;
+        // border-bottom: 1px solid black;
         padding-bottom: 1em;
 
     }

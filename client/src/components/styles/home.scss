@@ -1,156 +1,182 @@
 @import '../../main.scss';
 
 .home {
-    position: relative;
-    transition: all 0.5s ease-in-out;
-    width: 100%;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
 }
 
 .home-content {
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .home-image {
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: inherit;
-    background-image: linear-gradient(rgba(68, 68, 68, 0.68),rgba(0, 0, 0, 0.68)),url('../images/main.jpeg');
-    background-size: cover;
-    background-position: center;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: inherit;
+  background-image: linear-gradient(rgba(68, 68, 68, 0.68), rgba(0, 0, 0, 0.68)), url('../images/main.jpeg');
+  background-size: cover;
+  background-position: center;
 }
 
 .home-main {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    height: inherit;
-    z-index: 2;
-    display: flex;
-    &-content {
-        margin: 0 auto;
-        color: $altwhite;
-        align-self: center;
-        padding: 4em;
-    }
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  z-index: 2;
+  display: flex;
+
+  &-content {
+    margin: 0 auto;
+    color: $altwhite;
+    align-self: center;
+  }
 }
+
 @keyframes hvr-ripple-in {
-    100% {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        opacity: 1;
-    }
+  100% {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+  }
 }
-.home-main-content {
+
+.home-heading {
+  opacity: 0;
+  padding: 3em;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  animation: fade-in;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.4s;
+}
+
+.home-heading:before {
+  content: '';
+  position: absolute;
+  border: #e1e1e1 solid 1px;
+  top: -20px;
+  right: -20px;
+  bottom: -20px;
+  left: -20px;
+  opacity: 0;
+  animation: hvr-ripple-in;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+.home {
+  &-title {
+    font-size: 1em;
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+  }
+
+  &-subtitle {
+    text-transform: uppercase;
+    font-weight: 100;
     display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
+  }
 }
-.home-main-content:before {
+@keyframes mid-line {
+  100% {
+    bottom: 0;
+  }
+}
+.mid-line {
+  min-height: 2em;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  .home-line, .home-line-right {
+    flex: 1;
+    height: 2em;
+    position: relative;
+  }
+  .home-line:before {
     content: '';
     position: absolute;
-    border: #e1e1e1 solid 1px;
-    top: -20px;
-    right: -20px;
-    bottom: -20px;
-    left: -20px;
-    opacity: 0;
-    animation: hvr-ripple-in;
+    z-index: -1;
+    right: 0;
+    top: 0;
+    bottom: 100%;
+    background: $altwhite;
+    width: 1px;
+    animation: mid-line;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
+  }
 }
-
-
-.home {
-    
-    &-title {
-        font-size: 1em;
-        // font-weight: 500;
-        font-weight: 100;
-        text-transform: uppercase;
-        margin-bottom: 1em;
-    }
-    &-subtitle {
-        // font-size: 1.5em;
-        text-transform: uppercase;
-        font-weight: 100;
-        display: inline-block;
-        // padding-bottom: 0.25em;
-        // border-bottom: 1px solid $altwhite;
-    }
+@keyframes center-line {
+  100% {
+    left: 0;
+    right: 0;
+  }
 }
-// .home-hr {
-//     background-color: $altwhite;
-//     height: 3em;
-//     width: 0.5px;
-//     margin: 0 auto;
-// }
-// .home-hr-2nd {
-//     background-color: $altwhite;
-//     height: 4em;
-//     width: 0.5px;
-//     margin: 0 auto;
-// }
-// .home-nav {
-//     display: flex;
-//     justify-content: center;
-// }
-// .home-nav li {
-//     flex: 1;
-//     display: inline-block;
-//     font-size: 1em;
-//     border: 1px solid $altwhite;
-//     a {
-//         display: block;
-//         padding: 0.5em 0;
-//         color: $altwhite;
-//         text-decoration: none;
-//         text-transform: uppercase;
-//         &:hover {
-//             cursor: pointer;
-//             background-color: $main;
-//             transition: background-color 0.1s ease-in;
-//         }
-//     }
-// }
-
-// .home-links {
-//     color: $altwhite;
-//     font-size: 1.25em;
-//     border-top: 1px solid $altwhite;
-//     width: 40%;
-//     margin: 0 auto;
-//     display: flex;
-//     justify-content: space-around;
-//     padding-top: 0.5em;
-// }
-
-// .home-link {
-//     display: inline-block;
-//     // width: 2em;
-//     // background: red;
-// }
-// .home-link-hr {
-//     display: inline-block;
-//     width: 4em;
-//     margin: auto;
-//     margin-bottom: 0.5em;
-// }
-// .home-link-item {
-//     font-size: 2em;
-//     color: $altwhite;
-//     &:hover {
-//         color: $main;
-//         transition: color 0.1s ease-in;
-//     }
-// }
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+  }
+}
+.home-links {
+  margin: 0 auto;
+  position: relative;
+  .home-links-container {
+    list-style-type: none;
+    display: flex;
+    padding: 1em 0;
+    .home-link {
+      flex: 1;
+      text-transform: uppercase;
+      display: inline-block;
+      font-size: 2em;
+      opacity: 0;
+      animation: fade-in;
+      -webkit-animation-duration: 1s;
+      animation-duration: 1s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+      animation-delay: 3.3s;
+      a {
+        text-decoration: none;
+        color: $altwhite;
+      }
+    }
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    top: 0;
+    background: $altwhite;
+    height: 1px;
+    animation: center-line;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2.3s;
+  }
+}

@@ -5,16 +5,37 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    // background: red;
+}
+
+.about-container {
+    position: absolute;
+    z-index: 1;
+    height: 88%;
+    margin: 6vh;
+    // width: 100%;
+    left: 0;
+    right: 0;
+    // bottom: 0;
+    // top: 0;
+    // border: 1px solid black;
+}
+
+.about-title {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 5em;
 }
 
 .about-intro {
     width: 60%;
     margin: 0 auto;
-    margin-top: 8em;
+    margin-top: 2em;
     display: flex;
 
     .about-img {
-        max-width: 15em;
+        width: 15em;
         height: 15em;
         border-radius: 200px;
     }
@@ -29,12 +50,21 @@
 
 .introduction {
     &-heading {
-        display: block;
-        width: 100%;
-        // margin: 1em 0;
+        display: inline-block;
+        font-weight: 200;
+        font-size: 3em;
+        
+    }
+    &-heading-name {
+        // opacity: 0;
+        display: inline-block;
+        font-weight: 200;
+        font-size: 3em;
     }
     &-message {
-        margin-top: 1em;
+        margin-top: 0.25em;
+        font-weight: 100;
+        // opacity: 0;
     }
 }
 

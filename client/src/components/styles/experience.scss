@@ -1,0 +1,58 @@
+@import '../../main.scss';
+
+.experience {
+    z-index: 1;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.experience-title {
+    text-align: center;
+    margin-top: 3em;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+.experience-container {
+    width: 50%;
+    margin: 4em auto;
+}
+
+.experience {
+    &-col {
+        display: flex;
+        height: 25em;
+    }
+    &-img-container {
+        flex: 1;
+        display: flex;
+        .experience-img {
+            align-self: center;
+            display: block;
+            width: 8em;
+            margin: 0 auto;
+        }
+    }
+
+    &-main {
+        align-self: center;
+        flex: 3;
+        .experience {
+            &-position {
+                font-size: 1.75em;
+            }
+            &-duration {
+                // float: right;
+            }
+            &-tasks {
+                list-style-position: inside;
+                text-indent: -1em;
+                padding-left: 1em;
+            }
+            &-task {
+                font-size: 0.75em;
+            }
+        }
+    }
+}

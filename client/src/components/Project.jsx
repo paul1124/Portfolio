@@ -27,27 +27,6 @@ const projects = [
         view: 'https://chingu-job-shark.herokuapp.com/',
         code: 'https://github.com/chingu-voyages/v8-chimeras-team-04'
     },
-    {
-        name: 'Dummy',
-        img: images['job_tracker.png'],
-        description: 'Full-Stack Web Application for tracking applied job applications',
-        view: 'https://chingu-job-shark.herokuapp.com/',
-        code: 'https://github.com/chingu-voyages/v8-chimeras-team-04'
-    },
-    {
-        name: 'Dummy',
-        img: images['job_tracker.png'],
-        description: 'Full-Stack Web Application for tracking applied job applications',
-        view: 'https://chingu-job-shark.herokuapp.com/',
-        code: 'https://github.com/chingu-voyages/v8-chimeras-team-04'
-    },
-    {
-        name: 'Dummy',
-        img: images['job_tracker.png'],
-        description: 'Full-Stack Web Application for tracking applied job applications',
-        view: 'https://chingu-job-shark.herokuapp.com/',
-        code: 'https://github.com/chingu-voyages/v8-chimeras-team-04'
-    },
 ]
 
 

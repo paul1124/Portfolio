@@ -3,6 +3,7 @@ import Nav from './components/Nav';
 import Home from './components/Home';
 import About from './components/About';
 import Project from './components/Project';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Guestbook from './components/Guestbook';
 import Footer from './components/Footer';
@@ -19,6 +20,7 @@ function App() {
         <Home />
         <About />
         <Project />
+        <Experience />
         {/* <Guestbook /> */}
         <Contact />
         <Footer/>

@@ -5,6 +5,8 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    background-color: $main;
+    color: $altwhite;
 }
 
 .projects-title {
@@ -22,7 +24,7 @@
 
 .project {
     position: relative;
-    // border: 1px solid black;
+    background-color: $main-dark;
     height: 13em;
     &-name {
         margin: 1.75em;

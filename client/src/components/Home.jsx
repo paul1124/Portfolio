@@ -1,7 +1,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faFilePdf, faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faGit } from '@fortawesome/free-brands-svg-icons';
+import { faFilePdf, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import './styles/home.scss';
 
 export default function Home() {
@@ -10,37 +10,32 @@ export default function Home() {
             <div className="home-content">
                 <figure className="home-image"></figure>
                 <div className="home-main">
-                    <div className="home-main-content">
-                        <div className="home-heading">
-                            <h2 className="home-title">
-                                Paul Hong
-                            </h2>
-                            <h4 className="home-subtitle">
-                                <div className="home-subtitle-underline">Full Stack Developer</div>
-                            </h4>
-                        </div>
-                        <div className="mid-line">
-                            <div className="home-line"></div>
-                            <div className="home-line-right"></div>
-                        </div>
-                        <div className="home-links">
-                            <ul className="home-links-container">
-                                <li className="home-link">
-                                    <a href="https://www.github.com/paul1124" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a>
-                                </li>
-                                <li className="home-link">
-                                    <a href="https://www.linkedin.com/in/paulhong931124" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a>
-                                </li>
-                                <li className="home-link">
-                                    <a href=""><FontAwesomeIcon icon={faFilePdf} /></a>
-                                </li>
-                            </ul>
+                    <div className="home-intro-border">
+                        <div className="home-intro">
+                            <div className="home-intro-block">
+                            <h2 className="home-name">Paul Hong</h2>
+                            <h3 className="home-title">Web Developer/Designer</h3>
+                            </div>
                         </div>
                     </div>
-                    
-                </div>
-                <div className="down-container">
-                <a href="#about" className="down"><FontAwesomeIcon icon={faAngleDoubleDown} /></a>
+                    <div className="home-link-container">
+                        <a href="https://www.linkedin.com/in/paulhong931124/" target="_blank" rel="noopener noreferrer" className="home-link">
+                            <FontAwesomeIcon icon={faLinkedin} />
+                            <p className="home-link-name">LinkedIn</p>
+                        </a>
+                        <a href="https://www.github.com/paul1124" target="_blank" rel="noopener noreferrer" className="home-link">
+                            <FontAwesomeIcon icon={faGithub} />
+                            <p className="home-link-name">Github</p>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer" className="home-link">
+                            <FontAwesomeIcon icon={faFilePdf} />
+                            <p className="home-link-name">Resume</p>
+                        </a>
+                        <a href="" target="_blank" rel="noopener noreferrer" className="home-link">
+                            <FontAwesomeIcon icon={faEnvelopeSquare} />
+                            <p className="home-link-name">Email</p>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>

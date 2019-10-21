@@ -7,28 +7,50 @@
     overflow: hidden;
     // background: red;
 }
+@keyframes backToRight {
+    100% {
+        opacity: 1;
+        // right: 0;
+    }
+}
 
 .about-container {
     position: absolute;
-    z-index: 1;
-    height: 88%;
-    margin: 6vh;
-    // width: 100%;
+    z-index: 0;
+    opacity: 0;
+    // height: 88%;
+    // margin: 10em;
+    width: 100%;
+    background-image: linear-gradient(rgba(68, 68, 68, 0.68), rgba(0, 0, 0, 0.68)), url('../images/main.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
     left: 0;
-    right: 0;
+    right: 100%;
+    animation-name: backToRight;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     // bottom: 0;
     // top: 0;
     // border: 1px solid black;
 }
 
 .about-title {
-    font-size: 1em;
+    position: relative;
+    font-size: 1.5em;
     text-transform: uppercase;
     text-align: center;
     margin-top: 5em;
+    h2 {
+        font-weight: 200;
+
+    }
 }
 
 .about-intro {
+    position: relative;
     width: 60%;
     margin: 0 auto;
     margin-top: 2em;
@@ -69,6 +91,7 @@
 }
 
 .about-grid {
+    position: relative;
     margin: 0 auto;
     width: 75%;
     margin-top: 5em;

@@ -26,7 +26,7 @@ export default function About() {
                 <div className="about-grid">
                     <div className="grid-section">
                         <figure className="grid-section-figure">
-                            <Icon path={mdiAirplay} title="" size={3} />
+                            <Icon color="white" path={mdiAirplay} title="" size={3} />
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>Web Application</strong><br/>
@@ -35,7 +35,7 @@ export default function About() {
                     </div>
                     <div className="grid-section">
                         <figure className="grid-section-figure">
-                            <Icon path={mdiResponsive} title="" size={3} />
+                            <Icon color="white" path={mdiResponsive} title="" size={3} />
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>Responsiveness</strong><br/>
@@ -44,7 +44,7 @@ export default function About() {
                     </div>
                     <div className="grid-section">
                         <figure className="grid-section-figure">
-                            <Icon path={mdiTelevisionGuide} title="" size={3} />
+                            <Icon color="white" path={mdiTelevisionGuide} title="" size={3} />
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>UI/UX</strong><br/>
@@ -53,7 +53,7 @@ export default function About() {
                     </div>
                     <div className="grid-section">
                         <figure className="grid-section-figure">
-                            <Icon path={mdiMonitorClean} title="" size={3} />
+                            <Icon color="white" path={mdiMonitorClean} title="" size={3} />
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>Clean and Minimalistic</strong><br/>

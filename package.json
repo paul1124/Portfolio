@@ -1,4 +1,5 @@
 {
+  "homepage": "https://paul1124.github.io/portfolio",
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Paul's Portfolio",
@@ -7,7 +8,9 @@
     "start": "node index.js",
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "Paul",
@@ -24,6 +27,7 @@
     "mongoose": "^5.7.3"
   },
   "devDependencies": {
+    "gh-pages": "^2.1.1",
     "nodemon": "^1.19.3"
   }
 }

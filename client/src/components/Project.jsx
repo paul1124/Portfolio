@@ -27,6 +27,13 @@ const projects = [
         view: 'https://chingu-job-shark.herokuapp.com/',
         code: 'https://github.com/chingu-voyages/v8-chimeras-team-04'
     },
+    {
+        name: 'Blue Ocean Remodeling',
+        img: images['blueocean.png'],
+        description: 'Website for Remodeling company Blue Ocean built with React',
+        view: 'https://paul1124.github.io/blueocean/',
+        code: 'https://github.com/paul1124/blueocean/'
+    },
 ]
 
 

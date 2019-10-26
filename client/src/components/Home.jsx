@@ -1,8 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faGit } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
 import './styles/home.scss';
+
+const homeLinkStyle = {
+    color: 'white',
+    textDecoration: 'none'
+}
 
 export default function Home() {
     return (
@@ -32,8 +38,10 @@ export default function Home() {
                             <p className="home-link-name">Resume</p>
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer" className="home-link">
-                            <FontAwesomeIcon icon={faEnvelopeSquare} />
-                            <p className="home-link-name">Email</p>
+                            <Link style={homeLinkStyle} to="/portfolio/contact">
+                                <FontAwesomeIcon icon={faEnvelopeSquare} />
+                                <p className="home-link-name">Email</p>
+                            </Link>
                         </a>
                     </div>
                 </div>

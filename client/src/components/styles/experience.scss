@@ -5,6 +5,34 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    // background-color: $softgray;
+}
+
+@keyframes backToLeft {
+    100% {
+        opacity: 1;
+        // left: 0;
+        width: 100%;
+    }
+}
+
+.experience-background {
+    position: absolute;
+    z-index: 0;
+    opacity: 0;
+    background-color: $softgray;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    // left: 0;
+    right: 0;
+    width: 0%;
+    animation-name: backToLeft;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
 }
 
 .experience-title {
@@ -12,21 +40,56 @@
     margin-top: 3em;
     font-size: 2em;
     text-transform: uppercase;
+    font-weight: 200;
+    opacity: 0;
+    transform: translateY(2em);
+    animation-name: fadeFromBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes boxShadowFadeIn {
+    100% {
+        opacity: 1;
+        box-shadow: 0.5em 0.5em 0.5em #888;
+        transform: translateX(0);
+    }
 }
 
 .experience-container {
-    width: 50%;
+    width: 75%;
     margin: 4em auto;
+    margin-bottom: 2em;
 }
 
 .experience {
+    // padding: 1em;
     &-col {
+        color: white;
+        padding: 1em;
+        // background-color: white;
+        background-color: #666;
         display: flex;
-        height: 25em;
+        height: 30em;
+
+        opacity: 0;
+        transform: translateX(-3em);
+        // box-shadow: 0.5em 0.5em 0.5em #888;
+        // border-radius: 50px;
+        animation-name: boxShadowFadeIn;
+        animation-iteration-count: 1;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+        animation-delay: 1s;
+
+        border: 1px solid #888;
+        margin: 4em 2em;
     }
     &-img-container {
         flex: 1;
         display: flex;
+        // flex-direction: column;
         .experience-img {
             align-self: center;
             display: block;
@@ -40,10 +103,18 @@
         flex: 3;
         .experience {
             &-position {
-                font-size: 1.75em;
+                font-size: 2.75em;
+                font-weight: 200;
+                margin: 0;
+            }
+            &-company {
+                font-weight: 200;
+                // margin: 0;
             }
             &-duration {
-                // float: right;
+                // margin:
+                font-weight: 200;
+                margin-top: -0.5em;
             }
             &-tasks {
                 list-style-position: inside;
@@ -52,6 +123,7 @@
             }
             &-task {
                 font-size: 0.75em;
+                padding-right: 4em;
             }
         }
     }

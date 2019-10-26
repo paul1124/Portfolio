@@ -12,6 +12,8 @@
     width: 100%;
     color: $altwhite;
     overflow: hidden;
+    top: 0;
+    transition: top 0.3s;
     // display: none;
 }
 .nav-main {
@@ -26,7 +28,7 @@
     color: red;
     font-size: 1em;
     opacity: 0;
-    transform: translateY(-10em);
+    // transform: translateY(-10em);
     a {
         color: white;
         display: block;

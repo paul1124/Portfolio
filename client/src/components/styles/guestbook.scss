@@ -4,8 +4,11 @@
     z-index: 1;
     min-height: 100vh;
     position: relative;
-    background: yellow;
     overflow: hidden;
+    background-image: linear-gradient(rgba(68, 68, 68, 0.68), rgba(44, 44, 44, 0.68)), url('../images/guestbook/guestbook.jpeg');
+    background-size: cover;
+    background-repeat: none;    
+    color: white;
 }
 
 .guestbook-title {
@@ -13,20 +16,249 @@
     margin-top: 3em;
     font-size: 2em;
     text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(2em);
+    font-weight: 200;
+    animation-name: fadeFromBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
-.guestbook-container {
-    width: 90%;
+.guestbook-toggle {
+    display: block;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    font-weight: 100;
+    background: none;
+    color: white;
+    border-radius: 5px;
+    padding: 0.1em 0.5em;
+    opacity: 0;
+    transform: translateY(2em);
+    animation-name: fadeFromBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.75s;
+    &:hover {
+        cursor: pointer;
+        color: black;
+        background-color: white;
+        transition: 0.2s all ease-in-out;
+    }
+}
+@keyframes fadeFromBottomAlt {
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.guestbook {
+    z-index: 100;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.753);
+    .form-border {
+        width: 40em;
+        height: 30em;
+        margin: 0 auto;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            top: 0;
+            left: 0;
+            right: 100%;
+            background-color: white;
+            animation-name: toRight;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            height: 1px;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            background-color: white;
+            animation-name: toLeft;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .form {
+        // border-radius: 10px;
+        background-color: white;
+        color: black;
+        width: 40em;
+        height: 30em;
+        margin: 0 auto;
+        margin-top: 8em;
+        transition: all 1s ease-in-out; 
+        display: flex;
+        flex-direction: column;
+        padding: 2em 4em;
+        position: relative;
+        opacity: 0;
+        transform: translateY(2em);
+        animation-name: fadeFromBottomAlt;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.75s;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 1px;
+            left: 0;
+            top: 100%;
+            bottom: 0;
+            background-color: white;
+            animation-name: toTop;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 1.5s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 1px;
+            right: 0;
+            bottom: 100%;
+            top: 0;
+            background-color: white;
+            animation-name: toBottom;
+            animation-duration: 1s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+        }
+        &-title {
+            margin-top: 1em;
+            font-weight: 100;
+            text-transform: uppercase;
+        }
+        &-close {
+            border: none;
+            background: none;
+            margin-left: auto;
+            font-size: 1.5em;
+            font-weight: 100;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        &-input {
+            width: 100%;
+            font-size: 1em;
+            padding: 0.25em;
+            display: inline-block;
+            border: 1px solid $softgray;
+            margin: 0.5em 0;
+        }
+        &-textarea {
+            width: 100%;
+            padding: 0.25em;
+            font-size: 1em;
+            height: 8em;
+            margin-bottom: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid $softgray;
+            // opacity: 0;
+        }
+        &-submit {
+            background-color: $main;
+            color: white;
+            border: none;
+            width: 5em;
+            padding: 0.25em 1em;
+            border-radius: 5px;
+            margin-left: auto;
+            margin-top: 1em;
+            &:hover {
+                transition: background-color 0.25s ease-in-out;
+                background-color: $main-dark;
+            }
+        }
+    }
+}
+
+
+.guestbook-container {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 2em;
 }
 
 .post {
-    margin: 1em;
-    border: 1px solid black;
+    flex: 1;
     padding: 1em;
-    width: 13em;
-    height: 15em;
+    display: flex;
+    margin-bottom: 1em;
+    border-radius: 10px;
+
+    opacity: 0;
+    transform: translateY(2em);
+    animation-name: fadeFromBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    &:first-child {
+        animation-delay: 1.5s;
+    }
+    &:nth-child(n+2) {
+        animation-delay: 2s;
+    }
+    &:nth-child(n+3) {
+        animation-delay: 2.5s;
+    }
+    &:nth-child(n+4) {
+        animation-delay: 3s;
+    }
+    &:nth-child(n+5) {
+        animation-delay: 3.5s;
+    }
+    &:hover {
+        background-color: white;
+        color: black;
+        transition: 0.5s all ease-in-out;
+        .post-id {
+            border-right: 1px solid black;
+            transition: 0.5s border ease-in-out;
+        }
+    }
+}
+.post-id {
+    width: 20%;
+    border-right: 1px solid white;
+    padding: 0.5em 1em;
+    padding-top: 1em;
+    .post-name {
+        font-size: 1.5em;
+    }
+    .post-date {
+        font-size: 0.75em;
+    }
+}
+
+.post-box {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    justify-content: space-between;
+    padding: 1em;
+}
+.post-message {
+    align-self: center;
+}
+.post-delete {
+    align-self: center;
 }

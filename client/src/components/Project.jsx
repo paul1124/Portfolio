@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles/project.scss';
+import { Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faCode } from '@fortawesome/free-solid-svg-icons';
 
@@ -41,21 +42,21 @@ export default function Project() {
     return (
         <section className="projects" id="project">
             <h2 className="projects-title">Projects</h2>
-            <div className="project-container">
-                {projects.map(project => {
+            <Carousel className="project-container">
+            {projects.map(project => {
                     return (
-                        <div className="project" key={project.name}>
-                            <img className="project-img" src={project.img} alt={project.name}/>
-                            <div className="project-main">
+                        <Carousel.Item className="project" key={project.name}>
+                            <img className="d-block w-100 project-img" src={project.img} alt={project.name}/>
+                            <Carousel.Caption className="project-main">
                                 <h2 className="project-name">{project.name}</h2>
                                 <p className="project-description">{project.description}</p>
                                 <a className="project-preview" href={project.view}><FontAwesomeIcon icon={faSearch}/> Preview</a>
                                 <a href={project.code} className="project-code"><FontAwesomeIcon icon={faCode}/> Source</a>
-                            </div>
-                        </div>
+                            </Carousel.Caption>
+                        </Carousel.Item>
                     )
                 })}
-            </div>
+            </Carousel>
         </section>
     )
 }

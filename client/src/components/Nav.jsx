@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/nav.scss';
 
@@ -16,8 +16,26 @@ const whiteBackground = {
     color: 'black'
 }
 
+let prevScrollPos = window.pageYOffset;
+
+const listener = e => {
+    let currentScrollPos = window.pageYOffset;
+    if(prevScrollPos > currentScrollPos) {
+        document.getElementById("nav").style.top = "0";
+    } else {
+        document.getElementById("nav").style.top = "-50px";
+    }
+    prevScrollPos = currentScrollPos;
+}
+
 export default function Nav() {
     const [ isWhite, setIsWhite ] = useState(false);
+    useEffect(() => {
+        window.addEventListener('scroll', listener);
+        return () => {
+            window.removeEventListener('scroll', listener);
+        }
+    }, []);
     
     return (
         <nav className="nav" id="nav">
@@ -55,4 +73,5 @@ export default function Nav() {
             </div>
         </nav>
     )
+    
 }

@@ -5,8 +5,18 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    background-color: $main;
+    // background-color: $main;
+    background-image: linear-gradient(rgba(68, 68, 68, 0.68), rgba(0, 0, 0, 0.68)), url('../images/project/project.jpeg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: bottom;
     color: $altwhite;
+    opacity: 0;
+    animation-name: fadeFromBottom;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
 }
 
 .projects-title {
@@ -16,9 +26,9 @@
     font-size: 2em;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 4em;
+    margin-top: 3em;
     opacity: 0;
-    transform: translateY(2em);
+    transform: translateY(1em);
     animation-name: fadeFromBottom;
     animation-duration: 1s;
     animation-iteration-count: 1;
@@ -26,35 +36,56 @@
     font-weight: 200;
 }
 .project-container {
-    width: 60%;
-    margin: 4em auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    width: 60em;
+    height: 33em;
+    margin: 2em auto;
+    // display: grid;
+    // grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: nowrap;
+    opacity: 0;
+    transform: translateY(1em);
+    position: relative;
+    animation-name: fadeFromBottom;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
 }
 
 .project {
-    position: relative;
-    background-color: $main-dark;
-    height: 15em;
+    flex: 1;
+    width: 60em;
+    height: 33em;
+    margin: 0 auto;
+    background-color: $dark;
+    &-img {
+        // height: 33em;
+        transition: 0.25s all ease-in-out;
+        opacity: 0.7;
+        z-index: 1;
+        width: 60em;
+        height: 33em;
+    }
     &-name {
-        margin: 1.75em;
-        margin-bottom: 0;
+        font-size: 4em;
+        font-weight: 200;
+        margin-top: 2.7em;
+        margin-bottom: 0.65em;
+        // margin-top: auto;
     }
     &-description {
-        margin: 1em;
+        opacity: 0;
     }
     &-preview, &-code {
         text-decoration: none;
-        color: black;
+        color: white;
         display: block;
         position: absolute;
         bottom: 2em;
         padding: 0.25em;
         border-radius: 2px;
-        &:hover {
-            color: white;
-            background-color: $main;
-        }
+        opacity: 0;
     }
     &-preview {
         left: 4em;
@@ -63,32 +94,23 @@
         right: 4em;
     }
 }
-
-.project-img {
-    transition: 0.25s all ease-in-out;
-    opacity: 1;
-    z-index: 1;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-}
-
 .project-main {
-    // background-color: #999;
     transition: 0.25s all ease-in-out;
-    opacity: 0;
     overflow: hidden;
-    height: 100%;
-    position: relative;
-    z-index: 5;
+    height: 30em;
     text-align: center;
 }
 
 .project:hover {
+    transition: 1s all ease-in-out;
     .project-img {
         opacity: 0;
+        transition: 0.5s all ease-in-out;
+        text-decoration: none;;
     }
-    .project-main {
+    .project-description, .project-preview, .project-code {
         opacity: 1;
+        transition: 0.5s all ease-in-out;
+        text-decoration: none;
     }
 }

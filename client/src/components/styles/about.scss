@@ -40,6 +40,7 @@
     animation-duration: 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    animation-delay: 1s;
     // bottom: 0;
     // top: 0;
     // border: 1px solid black;
@@ -50,7 +51,7 @@
     font-size: 1.5em;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 5em;
+    margin-top: 4em;
     opacity: 0;
     transform: translateY(2em);
     animation-name: fadeFromBottom;

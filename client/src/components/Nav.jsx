@@ -94,32 +94,32 @@ export default function Nav() {
                 <button onClick={toggleNav} className="nav-small-button">{small ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretUp} />}</button>
                 <ul style={small ? smallStyle : null} className="nav-small-list">
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/">
+                    <Link className="nav-small-link" onClick={closeNav} to="/">
                         Home
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/about">
+                    <Link className="nav-small-link" onClick={closeNav} to="/about">
                         About
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/project">
+                    <Link className="nav-small-link" onClick={closeNav} to="/project">
                         Project
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/experience">
+                    <Link className="nav-small-link" onClick={closeNav} to="/experience">
                         Experience
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/guestbook">
+                    <Link className="nav-small-link" onClick={closeNav} to="/guestbook">
                         Guestbook
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/contact">
+                    <Link className="nav-small-link" onClick={closeNav} to="/contact">
                         Contact
                     </Link>
                 </div>

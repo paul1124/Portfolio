@@ -147,6 +147,7 @@
             animation-fill-mode: forwards;
             animation-delay: 2s;
         }
+        
         &-intro {
             font-size: 1em;
             text-align: center;
@@ -205,6 +206,13 @@
             }
         }
     }
+}
+.form .form-submitted {
+    display: block;
+    margin-top: 5em;
+    font-size: 2em;
+    text-align: center;
+    font-weight: 200;
 }
 
 

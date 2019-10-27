@@ -7,6 +7,7 @@ import './styles/guestbook.scss';
 
 export default function Guestbook() {
     const node = useRef();
+    const [ submitted, setSubmitted ] = useState(false);
     const [ form, setForm ] = useState(false);
     const [ posts, setPosts ] = useState([]);
     const [ name, setName ] = useState('');
@@ -33,6 +34,8 @@ export default function Guestbook() {
                 form ? 
                     <div className="guestbook" id="guestbookform" >
                         <div className="form-border">
+                            {
+                                !submitted ? 
                             <form className="form"  ref={node} onSubmit={handleGuestbookSubmit}>
                                 <h2 className="form-intro">"anonymously" <FontAwesomeIcon icon={faVolumeMute} /></h2>
                                 <button className="form-close" onClick={() => setForm(false)}>X</button>
@@ -42,6 +45,13 @@ export default function Guestbook() {
                                 <textarea name="" id="" cols="30" rows="10" className="form-textarea" value={message} onChange={handleMessageChange} required></textarea>
                                 <input type="submit" value="Submit" className="form-submit"/>
                             </form>
+                            :
+                            <form className="form">
+                                <h2 className="form-submitted">
+                                    Form Submitted
+                                </h2>
+                            </form>
+                        }
                         </div>
                     </div>
                 :
@@ -76,9 +86,18 @@ export default function Guestbook() {
 
         axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post)
             .then(res => console.log('Post added!' + res))
-            .catch(err => console.log(err));
-            // .then(window.location.reload());
-        // window.location = '/guestbook';
+            .catch(err => console.log(err))
+            .then(setSubmitted(true))
+            .then(
+                setTimeout(
+                    () => {
+                        window.location.reload();
+                    }, 1000
+                )
+                    // window.location.reload(), 2000)
+            );
+        // window.location.reload();
+        
     }
 
     function handleDelete(id) {

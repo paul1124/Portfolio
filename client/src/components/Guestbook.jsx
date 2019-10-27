@@ -78,7 +78,7 @@ export default function Guestbook() {
             .then(res => console.log('Post added!' + res))
             .catch(err => console.log(err));
 
-        window.location = '/guestbook';
+        // window.location = '/guestbook';
     }
 
     function handleDelete(id) {

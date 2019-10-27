@@ -5,10 +5,17 @@
     min-height: 100vh;
     position: relative;
     overflow: hidden;
+    
+    color: white;
+}
+.guestbook-background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
     background-image: linear-gradient(rgba(68, 68, 68, 0.68), rgba(44, 44, 44, 0.68)), url('../images/guestbook/guestbook.jpeg');
     background-size: cover;
     background-repeat: none;    
-    color: white;
+    z-index: 0;
 }
 
 .guestbook-title {

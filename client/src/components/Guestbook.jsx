@@ -12,7 +12,7 @@ export default function Guestbook() {
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
     useEffect(() => {
-        axios.get('https://powerful-earth-09834.herokuapp.com/posts', { crossDomain: true })
+        axios.get('http://localhost:5000/posts')
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));
     }, []);
@@ -24,30 +24,9 @@ export default function Guestbook() {
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
     }
-
-    // const handleClick = e => {
-    //     console.log(form);
-    //     if(node) {
-    //         const domNode = ReactDOM.findDOMNode(node);
-    //         if(node.contains)
-    //         if(node.current.contains(e.target)) {
-    //             return ;
-    //         } 
-    //         console.log(e.target);
-    //         console.log(form);
-    //         setForm(false);
-    //     }
-        
-    // }
-
-    // const checkIfContains = e => {
-    //     if(myRef.current.contains(e.target)) {
-    //         return ;
-    //     }
-    //     setForm(false);
-    // }
     return (
         <section className="guestbook-list" id="guestbook">
+            <div className="guestbook-background"></div>
             <h2 className="guestbook-title">Guestbook</h2>
             <button className="guestbook-toggle" onClick={() => setForm(true)}>Leave a Message</button>
             {
@@ -80,7 +59,7 @@ export default function Guestbook() {
                             <div className="post-box">
                                 <p className="post-message">{post.message}</p>
                             </div>
-                            {/* <button onClick={() => handleDelete(post._id)}>delete</button> */}
+                            <button onClick={() => handleDelete(post._id)}>delete</button>
                         </div>
                     )
                 })}
@@ -95,17 +74,17 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post)
+        axios.post('http://localhost:5000/posts/add', post)
             .then(res => console.log('Post added!' + res))
             .catch(err => console.log(err));
 
         window.location = '/guestbook';
     }
 
-    // function handleDelete(id) {
-    //     axios.delete('/posts/' + id)
-    //         .then(res => console.log(res.data));
-    //     setPosts(posts.filter(post => post._id !== id));
-    //         // .catch(err => res.status(400).json('Error: ' + err));
-    // }
+    function handleDelete(id) {
+        axios.delete('/posts/' + id)
+            .then(res => console.log(res.data));
+        setPosts(posts.filter(post => post._id !== id));
+            // .catch(err => res.status(400).json('Error: ' + err));
+    }
 }

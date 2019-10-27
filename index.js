@@ -24,7 +24,7 @@ connection
 
 const postRouter = require('./routes/post');
 
-app.use('/posts', postRouter);
+app.use('*/posts', postRouter);
 
 // Serve static assets if in prodution
 if(process.env.NODE_ENV === 'production') {

@@ -12,7 +12,6 @@
     "deploy": "gh-pages -d build",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
-  "proxy": "https://powerful-earth-09834.herokuapp.com/",
   "keywords": [
     "Paul",
     "Hong",

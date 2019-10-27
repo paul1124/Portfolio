@@ -100,7 +100,11 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('/posts/add', post)
+        axios.post('/posts/add', post, {
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
             .then(() => console.log('Post added!'));
 
         window.location = '/guestbook';

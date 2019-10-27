@@ -69,7 +69,7 @@ export default function Guestbook() {
                             <div className="post-box">
                                 <p className="post-message">{post.message}</p>
                             </div>
-                            <button onClick={() => handleDelete(post._id)}>delete</button>
+                            {/* <button onClick={() => handleDelete(post._id)}>delete</button> */}
                         </div>
                     )
                 })}
@@ -100,10 +100,10 @@ export default function Guestbook() {
         
     }
 
-    function handleDelete(id) {
-        axios.delete('https://powerful-earth-09834.herokuapp.com/posts/' + id)
-            .then(res => console.log(res.data));
-        setPosts(posts.filter(post => post._id !== id));
-            // .catch(err => res.status(400).json('Error: ' + err));
-    }
+    // function handleDelete(id) {
+    //     axios.delete('https://powerful-earth-09834.herokuapp.com/posts/' + id)
+    //         .then(res => console.log(res.data));
+    //     setPosts(posts.filter(post => post._id !== id));
+    //         // .catch(err => res.status(400).json('Error: ' + err));
+    // }
 }

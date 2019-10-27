@@ -38,7 +38,7 @@ export default function Home() {
                             <p className="home-link-name">Resume</p>
                         </a>
                         <a href="" target="_blank" rel="noopener noreferrer" className="home-link">
-                            <Link style={homeLinkStyle} to="/portfolio/contact">
+                            <Link style={homeLinkStyle} to="/contact">
                                 <FontAwesomeIcon icon={faEnvelopeSquare} />
                                 <p className="home-link-name">Email</p>
                             </Link>

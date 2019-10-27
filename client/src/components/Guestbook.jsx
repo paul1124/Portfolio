@@ -13,7 +13,7 @@ export default function Guestbook() {
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
     useEffect(() => {
-        axios.get('http://localhost:5000/posts/', { crossDomain: true })
+        axios.get('https://powerful-earth-09834.herokuapp.com/posts', { crossDomain: true })
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));
     }, []);

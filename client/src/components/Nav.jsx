@@ -58,32 +58,32 @@ export default function Nav() {
         <nav className="nav" id="nav">
             <div className="nav-main">
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/">
+                    <Link style={linkStyle} to="/">
                         Home
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/about">
+                    <Link style={linkStyle} to="/about">
                         About
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/project">
+                    <Link style={linkStyle} to="/project">
                         Project
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/experience">
+                    <Link style={linkStyle} to="/experience">
                         Experience
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/guestbook">
+                    <Link style={linkStyle} to="/guestbook">
                         Guestbook
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/contact">
+                    <Link style={linkStyle} to="/contact">
                         Contact
                     </Link>
                 </div>

@@ -13,7 +13,7 @@ export default function Guestbook() {
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
     useEffect(() => {
-        axios.get('http://localhost:5000/posts')
+        axios.get('http://localhost:5000/posts/', { crossDomain: true })
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));
     }, []);
@@ -96,7 +96,7 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post)
+        axios.post('https://https://powerful-earth-09834.herokuapp.com/posts/add', post, )
             .then(() => console.log('Post added!'));
 
         window.location = '/guestbook';

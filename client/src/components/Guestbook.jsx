@@ -13,7 +13,7 @@ export default function Guestbook() {
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
     useEffect(() => {
-        axios.get('http://localhost:5000/posts')
+        axios.get('/posts')
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));
         // document.addEventListener("mousedown", handleClick);
@@ -100,14 +100,14 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('http://localhost:5000/posts/add', post)
+        axios.post('/posts/add', post)
             .then(() => console.log('Post added!'));
 
         window.location = '/portfolio/guestbook';
     }
 
     function handleDelete(id) {
-        axios.delete('http://localhost:5000/posts/' + id)
+        axios.delete('/posts/' + id)
             .then(res => console.log(res.data));
         setPosts(posts.filter(post => post._id !== id));
             // .catch(err => res.status(400).json('Error: ' + err));

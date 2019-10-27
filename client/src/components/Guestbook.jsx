@@ -13,13 +13,9 @@ export default function Guestbook() {
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
     useEffect(() => {
-        axios.get('/posts')
+        axios.get('http://localhost:5000/posts')
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));
-        // document.addEventListener("mousedown", handleClick);
-        // return () => {
-        //     document.removeEventListener("mousedown", handleClick);
-        // };
     }, []);
 
     const handleNameChange = (e) => {
@@ -100,12 +96,7 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('/posts/add', post, {
-            headers: {
-                'Content-Type': 'x-www-form-urlencoded',
-                // "Access-Control-Allow-Origin": "*"
-            }
-        })
+        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post)
             .then(() => console.log('Post added!'));
 
         window.location = '/guestbook';

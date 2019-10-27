@@ -13,9 +13,9 @@ import './App.css';
 
 function App() {
   const [ currentPage, setCurrentPage ] = useState('home');
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div className="app">

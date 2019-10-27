@@ -96,7 +96,10 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post, )
+        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post, {
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Accept": "application/json"
+        })
             .then(() => console.log('Post added!'))
             .catch(err => console.log('Error: ' + err));
 

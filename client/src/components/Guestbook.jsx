@@ -77,7 +77,7 @@ export default function Guestbook() {
         axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post)
             .then(res => console.log('Post added!' + res))
             .catch(err => console.log(err))
-            .then(window.location = '/guestbook');
+            .then(window.location.reload());
         // window.location = '/guestbook';
     }
 

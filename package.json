@@ -9,11 +9,15 @@
     "server": "nodemon index.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [
     "Paul",
-    "Hong"
+    "Hong",
+    "Paul Hong",
+    "portfolio",
+    "Paul's portfolio"
   ],
   "author": "Paul Hong",
   "license": "UNLICENSED",

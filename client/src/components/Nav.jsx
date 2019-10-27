@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './styles/nav.scss';
 
@@ -8,12 +10,19 @@ const linkStyle = {
     textTransform: 'uppercase',
     padding: '1.5em 0'
 }
-const whiteBackground = {
+const smallLinkStyle = {
     display: 'block',
     textDecoration: 'none',
     textTransform: 'uppercase',
-    padding: '1.5em 0',
-    color: 'black'
+    padding: '1.5em 0'
+}
+
+const smallBackground = {
+    backgroundColor: 'rgba(0,0,0,0.9)'
+}
+
+const smallStyle = {
+    height: '100vh',
 }
 
 let prevScrollPos = window.pageYOffset;
@@ -30,48 +39,94 @@ const listener = e => {
 
 export default function Nav() {
     const [ isWhite, setIsWhite ] = useState(false);
+    const [ small, setSmall ] = useState(false);
     useEffect(() => {
         window.addEventListener('scroll', listener);
         return () => {
             window.removeEventListener('scroll', listener);
         }
     }, []);
+
+    const toggleNav = e => {
+        setSmall(!small);
+    }
+    const closeNav = e => {
+        setSmall(false);
+    }
     
     return (
         <nav className="nav" id="nav">
             <div className="nav-main">
                 <div className="nav-link">
-                    <Link onClick={() => setIsWhite(false)} style={isWhite ? whiteBackground : linkStyle} to="/portfolio/">
+                    <Link style={linkStyle} to="/portfolio/">
                         Home
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link onClick={() => setIsWhite(false)} style={isWhite ? whiteBackground : linkStyle} to="/portfolio/about">
+                    <Link style={linkStyle} to="/portfolio/about">
                         About
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link onClick={() => setIsWhite(false)} style={isWhite ? whiteBackground : linkStyle} to="/portfolio/project">
+                    <Link style={linkStyle} to="/portfolio/project">
                         Project
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link onClick={() => setIsWhite(true)} style={isWhite ? whiteBackground : linkStyle} to="/portfolio/experience">
+                    <Link style={linkStyle} to="/portfolio/experience">
                         Experience
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link onClick={() => setIsWhite(false)} style={isWhite ? whiteBackground : linkStyle} to="/portfolio/guestbook">
+                    <Link style={linkStyle} to="/portfolio/guestbook">
                         Guestbook
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link onClick={() => setIsWhite(false)} style={isWhite ? whiteBackground : linkStyle} to="/portfolio/contact">
+                    <Link style={linkStyle} to="/portfolio/contact">
                         Contact
                     </Link>
                 </div>
             </div>
+
+
+            <div className="nav-small" style={small ? smallBackground : null}>
+                <button onClick={toggleNav} className="nav-small-button">{small ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretUp} />}</button>
+                <ul style={small ? smallStyle : null} className="nav-small-list">
+                <div className="nav-link">
+                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/">
+                        Home
+                    </Link>
+                </div>
+                <div className="nav-link">
+                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/about">
+                        About
+                    </Link>
+                </div>
+                <div className="nav-link">
+                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/project">
+                        Project
+                    </Link>
+                </div>
+                <div className="nav-link">
+                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/experience">
+                        Experience
+                    </Link>
+                </div>
+                <div className="nav-link">
+                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/guestbook">
+                        Guestbook
+                    </Link>
+                </div>
+                <div className="nav-link">
+                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/contact">
+                        Contact
+                    </Link>
+                </div>
+                </ul>
+            </div>
         </nav>
     )
+    
     
 }

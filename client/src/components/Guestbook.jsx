@@ -1,9 +1,13 @@
-import React, { useState ,useEffect } from 'react';
+import React, { useState ,useEffect, useRef, createRef } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faVolumeMute } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
 import axios from 'axios';
 import './styles/guestbook.scss';
 
 export default function Guestbook() {
+    const node = useRef();
+    const myRef = createRef();
     const [ form, setForm ] = useState(false);
     const [ posts, setPosts ] = useState([]);
     const [ name, setName ] = useState('');
@@ -12,6 +16,10 @@ export default function Guestbook() {
         axios.get('http://localhost:5000/posts')
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));
+        // document.addEventListener("mousedown", handleClick);
+        // return () => {
+        //     document.removeEventListener("mousedown", handleClick);
+        // };
     }, []);
 
     const handleNameChange = (e) => {
@@ -21,16 +29,38 @@ export default function Guestbook() {
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
     }
+
+    // const handleClick = e => {
+    //     console.log(form);
+    //     if(node) {
+    //         const domNode = ReactDOM.findDOMNode(node);
+    //         if(node.contains)
+    //         if(node.current.contains(e.target)) {
+    //             return ;
+    //         } 
+    //         console.log(e.target);
+    //         console.log(form);
+    //         setForm(false);
+    //     }
+        
+    // }
+
+    // const checkIfContains = e => {
+    //     if(myRef.current.contains(e.target)) {
+    //         return ;
+    //     }
+    //     setForm(false);
+    // }
     return (
         <section className="guestbook-list" id="guestbook">
             <h2 className="guestbook-title">Guestbook</h2>
             <button className="guestbook-toggle" onClick={() => setForm(true)}>Leave a Message</button>
             {
                 form ? 
-                    <div className="guestbook">
+                    <div className="guestbook" id="guestbookform" >
                         <div className="form-border">
-                            <form className="form" onSubmit={handleGuestbookSubmit}>
-                                {/* <h2 className="form-title">Your Identity is Secure</h2> */}
+                            <form className="form"  ref={node} onSubmit={handleGuestbookSubmit}>
+                                <h2 className="form-intro">"anonymously" <FontAwesomeIcon icon={faVolumeMute} /></h2>
                                 <button className="form-close" onClick={() => setForm(false)}>X</button>
                                 <label htmlFor="" className="form-title">Name</label>
                                 <input type="text" className="form-input" value={name} onChange={handleNameChange} required/>
@@ -55,6 +85,7 @@ export default function Guestbook() {
                             <div className="post-box">
                                 <p className="post-message">{post.message}</p>
                             </div>
+                            {/* <button onClick={() => handleDelete(post._id)}>delete</button> */}
                         </div>
                     )
                 })}

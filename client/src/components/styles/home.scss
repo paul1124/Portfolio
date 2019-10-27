@@ -1,5 +1,5 @@
 @import '../../main.scss';
-
+// @media only screen and (max-width: 1068px) {}
 @keyframes fadeFromBottom {
   100% {
     opacity: 1;
@@ -100,6 +100,11 @@
     animation-delay: 0;
   }
 }
+@media only screen and (max-width: 1068px) {
+  .home-intro-border {
+    width: 75%;
+  }
+}
 
 .home-intro {
   width: 100%;
@@ -173,6 +178,16 @@
   margin: 0 auto;
   margin-top: 4em;
   width: 50%;
+}
+@media only screen and (max-width: 1068px) {
+  .home-link-container {
+    width: 75%;
+  }
+}
+@media only screen and (max-width: 735px) {
+  .home-link-container {
+    margin-top: 2em;
+  }
 }
 .home-link {
   opacity: 0;

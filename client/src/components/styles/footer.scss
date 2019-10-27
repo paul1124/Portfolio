@@ -1,5 +1,23 @@
 @import '../../main.scss';
 
+@keyframes text {
+    0% {
+        color: $altwhite;
+    }
+    25% {
+        color: $softgray;
+    }
+    50% {
+        color: $test;
+    }
+    75% {
+        color: $darkgray;
+    }
+    100% {
+        color: $altwhite;
+    }
+}
+
 .footer {
     height: 10vh;
     position: relative;
@@ -14,9 +32,14 @@
     background: $ldark;
     text-align: center;
     color: $altwhite;
+    animation-name: text;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    // animation-fill-mode: forwards;
     p {
         margin: 0 auto;
         display: block;
         align-self: center;
+        font-weight: 100;
     }
 }

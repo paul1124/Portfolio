@@ -18,7 +18,7 @@ export default function About() {
                     <div className="about-introduction">
                         <h2 className="introduction-heading">Hey. </h2>
                         <h2 className="introduction-heading-name">I'm Paul.</h2>
-                        <p className="introduction-message">I design and develop simple and clean websites, and I love what I do. 
+                        <p className="introduction-message">I design and develop simple and clean websites, <br className="small"/> and I love what I do. 
                         {/* <br/>I'm always looking for opportunities to learn something, as well as <br/> use what I have to design the best website. */}
                         </p>
                     </div>
@@ -30,7 +30,7 @@ export default function About() {
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>Web Application</strong><br/>
-                            Take control of what you see on your web page by manipulating the data yourself.
+                        <span className="smallno">Take control of what you see on your web page by</span> Manipulating the data yourself.
                         </figcaption>
                     </div>
                     <div className="grid-section">
@@ -39,7 +39,7 @@ export default function About() {
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>Responsiveness</strong><br/>
-                            View your web contents not only on your PC, but also on your tablets or phones.
+                            <span className="smallno">View your web contents not only on your PC, but</span> Also on your tablets or phones.
                         </figcaption>
                     </div>
                     <div className="grid-section">
@@ -48,7 +48,7 @@ export default function About() {
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>UI/UX</strong><br/>
-                            Your website is your website. Experience efficient accessibility with a touch of aesthetics.
+                            Your website is your website. <span className="smallno">Experience efficient accessibility with a touch of aesthetics.</span>
                         </figcaption>
                     </div>
                     <div className="grid-section">
@@ -57,7 +57,7 @@ export default function About() {
                         </figure>
                         <figcaption className="grid-section-figcaption">
                             <strong>Clean and Minimalistic</strong><br/>
-                            Less is more. Cleanliness and conciseness bring more refined tone to your websites.
+                            Less is more. <span className="smallno">Cleanliness and conciseness bring more refined tone to your websites.</span>
                         </figcaption>
                     </div>
                 </div>

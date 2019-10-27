@@ -112,10 +112,10 @@
     // background-color: $softgray;
     height: 25em;
     justify-content: space-around;
-    padding: 3em;
-    // height: 100%;
-    padding-bottom: 0;
+    padding: 0 3em;
+    padding-top: 1em;
     position: relative;
+    overflow: hidden;
     opacity: 0;
     background-color: white;
     animation-name: fadeFromBottom;
@@ -123,6 +123,20 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     animation-delay: 3s;
+    &-intro {
+        color: $dark;
+        margin: 1em auto;
+        text-align: center;
+        font-weight: 200;
+        font-size: 1em;
+        opacity: 0;
+        transform: translateY(2em);
+        animation-name: fadeFromBottom;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        animation-delay: 3.25s;
+    }
     &-input {
         width: 100%;
         font-size: 1em;
@@ -137,7 +151,7 @@
         animation-iteration-count: 1;
         animation-fill-mode: forwards;
         animation-delay: 3.5s;
-        &:nth-child(n+2) {
+        &:nth-child(n+3) {
             animation-delay: 4s;
         }
     }
@@ -145,7 +159,7 @@
         width: 100%;
         padding: 0.25em;
         font-size: 1em;
-        height: 10em;
+        height: 8.5em;
         margin-bottom: 0.5em;
         margin: 0.5em 0;
         border: 1px solid $softgray;
@@ -181,3 +195,24 @@
         }
     }
 }
+
+@media only screen and (max-width: 1068px) {
+    .contact-modal {
+        width: 60%;
+    }
+    .contact-form {
+        padding: 1em;
+    }
+ }
+ @media only screen and (max-width: 735px) {
+    .contact-modal {
+        // padding: 1em;
+        width: 80%;
+    }
+    .contact-form {
+        padding: 1em;
+        &-submit {
+            font-size: 1em;
+        }
+    }
+ }

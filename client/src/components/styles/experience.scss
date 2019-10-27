@@ -128,3 +128,39 @@
         }
     }
 }
+@media only screen and (max-width: 1068px) {
+    .experience-container {
+        width: 95%;
+        
+    }
+   
+}
+@media only screen and (max-width: 735px) {
+    .experience-col {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .experience-img-container {
+        flex: 1;
+    }
+    .experience-main {
+        text-align: center;
+        flex: 1;
+        .experience-position {
+            font-size: 1.75em;
+            // color: black;
+            margin: 0.75em 0;
+        }
+        .experience-company {
+            font-size: 1.25em;
+        }
+        .experience-duration {
+            font-size: 0.9em;
+            font-weight: 100;
+        }
+    }
+    
+    .experience-tasks {
+        display: none;
+    }
+}

@@ -37,23 +37,6 @@
         text-transform: uppercase;
         position: relative;
         transition: 0.5s all ease-in-out;
-        &::after {
-            content: '';
-
-            position: absolute;
-            background-color: white;
-            height: 1px;
-            left: 10em;
-            right: 10em;
-            bottom: 1em;
-            transition: 0.5s all ease-in-out;
-        }
-        &:hover {
-            &::after {
-                left: 7em;
-                right: 7em;
-            }
-        }
     }
     animation-name: fadeFromTop;
     animation-duration: 1s;
@@ -78,3 +61,54 @@
         animation-delay: 1.25s;
     }
 }
+.nav-small {
+    width: 100%;
+    transition: background 1s ease-in-out;
+    display: none;
+}
+.nav-small-list {
+    height: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 150;
+    transition: height 1s ease-in-out;
+    overflow: hidden;
+}
+.nav-small-button {
+    display: block;
+    margin: 0 auto;
+    background: none;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 0.25em;
+    font-size: 1.5em;
+    font-weight: 200;
+    border-bottom: 1px dotted white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.nav-small-link {
+    padding: 0.5em 0;
+}
+.nav-small-link:hover {
+    color: black;
+    background-color: white;
+}
+
+@media only screen and (max-width: 1068px) {
+    .nav-link {
+        font-size: 0.75em;
+    }
+ }
+ @media only screen and (max-width: 735px) {
+    //  .ㅜ
+    .nav-main {
+        display: none;
+    }
+    .nav-small {
+        display: initial;
+    }
+ }

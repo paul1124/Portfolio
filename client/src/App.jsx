@@ -26,12 +26,12 @@ function App() {
         atActive={{ opacity: 1 }}
         runOnMount={true}
       >
-          <Route exact path="" component={Home} />
-          <Route exact path="about" component={About} />
-          <Route exact path="project" component={Project} />
-          <Route exact path="experience" component={Experience} />
-          <Route exact path="contact" component={Contact} />
-          <Route exact path="guestbook" component={Guestbook} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/about" component={About} />
+          <Route exact path="/project" component={Project} />
+          <Route exact path="/experience" component={Experience} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/guestbook" component={Guestbook} />
       </AnimatedSwitch>
       <Footer />
     </div>

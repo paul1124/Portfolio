@@ -85,7 +85,7 @@ export default function Guestbook() {
                             <div className="post-box">
                                 <p className="post-message">{post.message}</p>
                             </div>
-                            {/* <button onClick={() => handleDelete(post._id)}>delete</button> */}
+                            <button onClick={() => handleDelete(post._id)}>delete</button>
                         </div>
                     )
                 })}

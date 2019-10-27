@@ -58,32 +58,32 @@ export default function Nav() {
         <nav className="nav" id="nav">
             <div className="nav-main">
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/">
+                    <Link style={linkStyle} to="/">
                         Home
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/about">
+                    <Link style={linkStyle} to="/about">
                         About
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/project">
+                    <Link style={linkStyle} to="/project">
                         Project
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/experience">
+                    <Link style={linkStyle} to="/experience">
                         Experience
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/guestbook">
+                    <Link style={linkStyle} to="/guestbook">
                         Guestbook
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link style={linkStyle} to="/portfolio/contact">
+                    <Link style={linkStyle} to="/contact">
                         Contact
                     </Link>
                 </div>
@@ -94,32 +94,32 @@ export default function Nav() {
                 <button onClick={toggleNav} className="nav-small-button">{small ? <FontAwesomeIcon icon={faCaretDown} /> : <FontAwesomeIcon icon={faCaretUp} />}</button>
                 <ul style={small ? smallStyle : null} className="nav-small-list">
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/">
+                    <Link className="nav-small-link" onClick={closeNav} to="/">
                         Home
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/about">
+                    <Link className="nav-small-link" onClick={closeNav} to="/about">
                         About
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/project">
+                    <Link className="nav-small-link" onClick={closeNav} to="/project">
                         Project
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/experience">
+                    <Link className="nav-small-link" onClick={closeNav} to="/experience">
                         Experience
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/guestbook">
+                    <Link className="nav-small-link" onClick={closeNav} to="/guestbook">
                         Guestbook
                     </Link>
                 </div>
                 <div className="nav-link">
-                    <Link className="nav-small-link" onClick={closeNav} to="/portfolio/contact">
+                    <Link className="nav-small-link" onClick={closeNav} to="/contact">
                         Contact
                     </Link>
                 </div>

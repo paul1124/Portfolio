@@ -102,7 +102,8 @@ export default function Guestbook() {
 
         axios.post('/posts/add', post, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Access-Control-Allow-Origin": "*"
             }
         })
             .then(() => console.log('Post added!'));

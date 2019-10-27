@@ -1,4 +1,4 @@
-import React, { useState ,useEffect, useRef, createRef } from 'react';
+import React, { useState ,useEffect, useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeMute } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
@@ -7,7 +7,6 @@ import './styles/guestbook.scss';
 
 export default function Guestbook() {
     const node = useRef();
-    const myRef = createRef();
     const [ form, setForm ] = useState(false);
     const [ posts, setPosts ] = useState([]);
     const [ name, setName ] = useState('');
@@ -96,20 +95,17 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post, {
-            "Content-Type": "application/x-www-form-urlencoded",
-            "Accept": "application/json"
-        })
-            .then(() => console.log('Post added!'))
-            .catch(err => console.log('Error: ' + err));
+        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post)
+            .then(res => console.log('Post added!' + res))
+            .catch(err => console.log(err));
 
         window.location = '/guestbook';
     }
 
-    function handleDelete(id) {
-        axios.delete('/posts/' + id)
-            .then(res => console.log(res.data));
-        setPosts(posts.filter(post => post._id !== id));
-            // .catch(err => res.status(400).json('Error: ' + err));
-    }
+    // function handleDelete(id) {
+    //     axios.delete('/posts/' + id)
+    //         .then(res => console.log(res.data));
+    //     setPosts(posts.filter(post => post._id !== id));
+    //         // .catch(err => res.status(400).json('Error: ' + err));
+    // }
 }

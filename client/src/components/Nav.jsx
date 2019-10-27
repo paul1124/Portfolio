@@ -10,12 +10,6 @@ const linkStyle = {
     textTransform: 'uppercase',
     padding: '1.5em 0'
 }
-const smallLinkStyle = {
-    display: 'block',
-    textDecoration: 'none',
-    textTransform: 'uppercase',
-    padding: '1.5em 0'
-}
 
 const smallBackground = {
     backgroundColor: 'rgba(0,0,0,0.9)'
@@ -38,7 +32,6 @@ const listener = e => {
 }
 
 export default function Nav() {
-    const [ isWhite, setIsWhite ] = useState(false);
     const [ small, setSmall ] = useState(false);
     useEffect(() => {
         window.addEventListener('scroll', listener);

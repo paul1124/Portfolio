@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import AboutImg from './images/about/main_pic.jpg';
 import Icon from '@mdi/react';
 import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean } from '@mdi/js';
@@ -6,7 +6,6 @@ import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean }�
 import './styles/about.scss';
 
 export default function About() {
-    const aboutTitle = useRef();
     return (
         <section id="about" className="about">
             <div className="about-container"></div>
@@ -19,7 +18,6 @@ export default function About() {
                         <h2 className="introduction-heading">Hey. </h2>
                         <h2 className="introduction-heading-name">I'm Paul.</h2>
                         <p className="introduction-message">I design and develop simple and clean websites, <br className="small"/> and I love what I do. 
-                        {/* <br/>I'm always looking for opportunities to learn something, as well as <br/> use what I have to design the best website. */}
                         </p>
                     </div>
                 </div>

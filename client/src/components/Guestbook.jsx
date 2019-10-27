@@ -103,7 +103,7 @@ export default function Guestbook() {
         axios.post('/posts/add', post)
             .then(() => console.log('Post added!'));
 
-        window.location = '/portfolio/guestbook';
+        window.location = '/guestbook';
     }
 
     function handleDelete(id) {

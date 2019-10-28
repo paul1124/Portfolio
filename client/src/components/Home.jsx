@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf, faEnvelopeSquare } from '@fortawesome/free-solid-svg-icons';
+import Resume from '../Resume.pdf';
 import './styles/home.scss';
 
 const homeLinkStyle = {
@@ -37,7 +38,7 @@ export default function Home() {
                             <FontAwesomeIcon icon={faFilePdf} />
                             <p className="home-link-name">Resume</p>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="home-link">
+                        <a href={Resume} target="_blank" rel="noopener noreferrer" className="home-link">
                             <Link style={homeLinkStyle} to="/contact">
                                 <FontAwesomeIcon icon={faEnvelopeSquare} />
                                 <p className="home-link-name">Email</p>

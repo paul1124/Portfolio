@@ -26,7 +26,7 @@ const listener = e => {
     if(currentScrollPos < 70) {
         document.getElementById("nav").style.top = "0";
     }
-    else if(prevScrollPos - currentScrollPos > 30) {
+    else if(prevScrollPos > currentScrollPos) {
         document.getElementById("nav").style.top = "0";
     } else {
         document.getElementById("nav").style.top = "-50px";

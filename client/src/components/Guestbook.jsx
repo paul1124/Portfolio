@@ -13,7 +13,7 @@ export default function Guestbook() {
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
     useEffect(() => {
-        axios.get('https://powerful-earth-09834.herokuapp.com/posts')
+        axios.get('https://paulhong-portfolio.herokuapp.com/posts')
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));
     }, []);
@@ -84,7 +84,7 @@ export default function Guestbook() {
             message
         }
 
-        axios.post('https://powerful-earth-09834.herokuapp.com/posts/add', post)
+        axios.post('https://paulhong-portfolio.herokuapp.com/posts/add', post)
             .then(res => console.log('Post added!' + res))
             .catch(err => console.log(err))
             .then(setSubmitted(true))
@@ -101,7 +101,7 @@ export default function Guestbook() {
     }
 
     // function handleDelete(id) {
-    //     axios.delete('https://powerful-earth-09834.herokuapp.com/posts/' + id)
+    //     axios.delete('https://paulhong-portfolio.herokuapp.com/posts/' + id)
     //         .then(res => console.log(res.data));
     //     setPosts(posts.filter(post => post._id !== id));
     //         // .catch(err => res.status(400).json('Error: ' + err));

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/experience.scss';
 
 function importAll(r) {
@@ -48,6 +48,9 @@ const experiences = [
 ]
 
 export default function Experience() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <section className="experience" id="experience">
             <div className="experience-background"></div>

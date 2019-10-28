@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -12,6 +12,9 @@ const homeLinkStyle = {
 }
 
 export default function Home() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <section id="home" className="home">
             <div className="home-content">
@@ -34,16 +37,14 @@ export default function Home() {
                             <FontAwesomeIcon icon={faGithub} />
                             <p className="home-link-name">Github</p>
                         </a>
-                        <a href="#" target="_blank" rel="noopener noreferrer" className="home-link">
+                        <a href={Resume} target="_blank" rel="noopener noreferrer" className="home-link">
                             <FontAwesomeIcon icon={faFilePdf} />
                             <p className="home-link-name">Resume</p>
                         </a>
-                        <a href={Resume} target="_blank" rel="noopener noreferrer" className="home-link">
-                            <Link style={homeLinkStyle} to="/contact">
-                                <FontAwesomeIcon icon={faEnvelopeSquare} />
-                                <p className="home-link-name">Email</p>
-                            </Link>
-                        </a>
+                        <Link className="home-link" style={homeLinkStyle} to="/contact">
+                            <FontAwesomeIcon icon={faEnvelopeSquare} />
+                            <p className="home-link-name">Email</p>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import AboutImg from './images/about/main_pic.jpg';
 import Icon from '@mdi/react';
 import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean } from '@mdi/js';
@@ -6,6 +6,9 @@ import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean }�
 import './styles/about.scss';
 
 export default function About() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <section id="about" className="about">
             <div className="about-container"></div>

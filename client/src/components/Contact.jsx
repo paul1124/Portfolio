@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import './styles/contact.scss';
 
 export default function Contact() {
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <section className="contact" id="contact">
             <h2 className="contact-title">Contact</h2>

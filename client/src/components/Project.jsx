@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './styles/project.scss';
 import { Carousel } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -39,6 +39,9 @@ const projects = [
 
 
 export default function Project() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <section className="projects" id="project">
             <h2 className="projects-title">Projects</h2>

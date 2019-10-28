@@ -23,7 +23,10 @@ let prevScrollPos = window.pageYOffset;
 
 const listener = e => {
     let currentScrollPos = window.pageYOffset;
-    if(prevScrollPos > currentScrollPos) {
+    if(currentScrollPos < 70) {
+        document.getElementById("nav").style.top = "0";
+    }
+    else if(prevScrollPos - currentScrollPos > 30) {
         document.getElementById("nav").style.top = "0";
     } else {
         document.getElementById("nav").style.top = "-50px";

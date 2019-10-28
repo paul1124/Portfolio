@@ -36,11 +36,15 @@
     animation-name: text;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    // animation-fill-mode: forwards;
     p {
         margin: 0 auto;
         display: block;
         align-self: center;
         font-weight: 100;
+    }
+}
+@media only screen and (max-width: 735px) {
+    .copyright {
+        font-size: 0.6em;
     }
 }

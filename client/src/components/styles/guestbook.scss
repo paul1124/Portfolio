@@ -236,19 +236,19 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     &:first-child {
-        animation-delay: 1.25s;
+        animation-delay: 0.5s;
     }
     &:nth-child(n+2) {
-        animation-delay: 1.5s;
+        animation-delay: 0.75s;
     }
     &:nth-child(n+3) {
-        animation-delay: 1.75s;
+        animation-delay: 1s;
     }
     &:nth-child(n+4) {
-        animation-delay: 2s;
+        animation-delay: 1.25s;
     }
     &:nth-child(n+5) {
-        animation-delay: 2.25s;
+        animation-delay: 1.5s;
     }
     &:hover {
         background-color: white;

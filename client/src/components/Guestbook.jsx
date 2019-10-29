@@ -1,4 +1,5 @@
 import React, { useState ,useEffect, useRef } from 'react';
+import Pagination from './Pagination';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faVolumeMute } from '@fortawesome/free-solid-svg-icons';
 import moment from 'moment';
@@ -12,6 +13,9 @@ export default function Guestbook() {
     const [ posts, setPosts ] = useState([]);
     const [ name, setName ] = useState('');
     const [ message, setMessage ] = useState('');
+    const [ currentPage, setCurrentPage ] = useState(1);
+    const [ postsPerPage, setPostsPerPage ] = useState(5);
+
     useEffect(() => {
         window.scrollTo(0, 0);
         axios.get('https://paulhong-portfolio.herokuapp.com/posts')
@@ -26,6 +30,15 @@ export default function Guestbook() {
     const handleMessageChange = (e) => {
         setMessage(e.target.value);
     }
+
+    // Get current posts
+    const indexOfLastPost = currentPage * postsPerPage;
+    const indexOfFirstPost = indexOfLastPost - postsPerPage;
+    const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
+    // Change page
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
     return (
         <section className="guestbook-list" id="guestbook">
             <div className="guestbook-background"></div>
@@ -59,7 +72,7 @@ export default function Guestbook() {
                     null
             }
             <div className="guestbook-container">
-                {posts.map(post => {
+                {currentPosts.map(post => {
                     return (
                         <div className="post" key={post._id}>
                             <div className="post-id">
@@ -75,6 +88,7 @@ export default function Guestbook() {
                     )
                 })}
             </div>
+            <Pagination postsPerPage={postsPerPage} totalPosts={posts.length} paginate={paginate} />
         </section>
     )
     function handleGuestbookSubmit(e) {

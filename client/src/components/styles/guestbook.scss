@@ -236,19 +236,19 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     &:first-child {
-        animation-delay: 1.5s;
+        animation-delay: 1.25s;
     }
     &:nth-child(n+2) {
-        animation-delay: 2s;
+        animation-delay: 1.5s;
     }
     &:nth-child(n+3) {
-        animation-delay: 2.5s;
+        animation-delay: 1.75s;
     }
     &:nth-child(n+4) {
-        animation-delay: 3s;
+        animation-delay: 2s;
     }
     &:nth-child(n+5) {
-        animation-delay: 3.5s;
+        animation-delay: 2.25s;
     }
     &:hover {
         background-color: white;
@@ -322,4 +322,16 @@
     .guestbook .form-border .form {
         padding: 2em;
     }
+}
+
+.pagination {
+    width: 100%;
+    background: red;
+    display: flex;
+    justify-content: center;
+}
+.page-link {
+    background: none;
+    color: white;
+    transition: all 0.25s ease-in-out;
 }

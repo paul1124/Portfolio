@@ -9,7 +9,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Guestbook from './components/Guestbook';
 import Footer from './components/Footer';
-import './App.css';
+import './App.scss';
 
 function App() {
   const [ currentPage, setCurrentPage ] = useState('home');
@@ -19,8 +19,8 @@ function App() {
 
   return (
     <div className="app">
-      <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <AnimatedSwitch
+      {/* <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
+      {/* <AnimatedSwitch
         atEnter={{ opacity: 0 }}
         atLeave={{ opacity: 0 }}
         atActive={{ opacity: 1 }}
@@ -32,7 +32,12 @@ function App() {
           <Route exact path="/experience" component={Experience} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/guestbook" component={Guestbook} />
-      </AnimatedSwitch>
+      </AnimatedSwitch> */}
+      <Home />
+      <About />
+      <Project />
+      <Experience />
+      <Contact />
       <Footer />
     </div>
   );

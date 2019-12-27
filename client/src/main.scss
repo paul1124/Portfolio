@@ -7,6 +7,7 @@ html {
 * {
     margin: 0;
     padding: 0;
+    font-family: 'europa';
 }
 
 $dark: rgba(0,0,0,0.8);
@@ -18,8 +19,21 @@ $main: #275F7F;
 $main-dark: #1F3F59;
 $darkgray: #B6AEAE;
 $test: rgb(130, 180, 255);
-
-
-.main-color {
-    color: $main;
-}
+// $first: #223E49;
+// $second: #81A1B0;
+// $third: #C7E5F0;
+// $fourth: #F9EED4;
+// $fifth: #B6634D;
+// $first: #433633;
+// $second: #5C5552;
+// $third: #8F857D;
+// $fourth: #DECBB7;
+// $fifth: #F7F0F5;
+$first: #1E1E2F;
+$second: #525F7F;
+$third: #E14ECA;
+$fourth: #C221A9;
+$fifth: #6C757D;
+$sixth: #32325D;
+$seventh: #F3A4B5;
+$eighth: #e6e6e6;

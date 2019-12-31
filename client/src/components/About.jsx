@@ -1,4 +1,6 @@
 import React from 'react';
+import Icon from '@mdi/react';
+import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean } from '@mdi/js';
 import './styles/about.scss';
 import AboutImg from './images/about/main_pic.jpg';
 
@@ -16,6 +18,44 @@ const About = () => {
                     <img src={AboutImg} alt="main" className="about-img"/>
                 </div>
             </div>
+            //                 <div className="about-grid">
+//                     <div className="grid-section">
+//                         <figure className="grid-section-figure">
+//                             <Icon color="white" path={mdiAirplay} title="" size={3} />
+//                         </figure>
+//                         <figcaption className="grid-section-figcaption">
+//                             <strong>Web Application</strong><br/>
+//                         <span className="smallno">Take control of what you see on your web page by</span> Manipulating the data yourself.
+//                         </figcaption>
+//                     </div>
+//                     <div className="grid-section">
+//                         <figure className="grid-section-figure">
+//                             <Icon color="white" path={mdiResponsive} title="" size={3} />
+//                         </figure>
+//                         <figcaption className="grid-section-figcaption">
+//                             <strong>Responsiveness</strong><br/>
+//                             <span className="smallno">View your web contents not only on your PC, but</span> Also on your tablets or phones.
+//                         </figcaption>
+//                     </div>
+//                     <div className="grid-section">
+//                         <figure className="grid-section-figure">
+//                             <Icon color="white" path={mdiTelevisionGuide} title="" size={3} />
+//                         </figure>
+//                         <figcaption className="grid-section-figcaption">
+//                             <strong>UI/UX</strong><br/>
+//                             Your website is your website. <span className="smallno">Experience efficient accessibility with a touch of aesthetics.</span>
+//                         </figcaption>
+//                     </div>
+//                     <div className="grid-section">
+//                         <figure className="grid-section-figure">
+//                             <Icon color="white" path={mdiMonitorClean} title="" size={3} />
+//                         </figure>
+//                         <figcaption className="grid-section-figcaption">
+//                             <strong>Clean and Minimalistic</strong><br/>
+//                             Less is more. <span className="smallno">Cleanliness and conciseness bring more refined tone to your websites.</span>
+//                         </figcaption>
+//                     </div>
+//                 </div>
         </section>
     )
 };

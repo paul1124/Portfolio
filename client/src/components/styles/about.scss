@@ -1,16 +1,16 @@
 @import '../../main.scss';
 
 .about {
-    z-index: 1;
-    min-height: 100vh;
     position: relative;
     overflow: hidden;
     color: $eighth;
+    background-color: $second;
+    
 }
 
 .about-container {
     width: 50%;
-    margin: 0 auto;
+    margin: 3em auto;
     // border: 1px solid white;
     display: flex;
 

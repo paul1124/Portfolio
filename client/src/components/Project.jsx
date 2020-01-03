@@ -46,19 +46,23 @@ const Project = () => {
                         <img src="https://images.unsplash.com/photo-1494253109108-2e30c049369b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt=""/>
                     </div>
                     <div className="featured-project-info">
-                        <p className="featured-subheading">Featured</p>
-                        <h2 className="featured-heading">trello.com Clone</h2>
-                        <p className="featured-description">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sit ullam sapiente laboriosam fugiat culpa, vero esse fuga eveniet minus architecto animi at soluta assumenda omnis iusto. Porro, repudiandae esse.
-                        </p>
-                        <ul className="featured-tech">
-                            <li>React.js</li>
-                            <li>Sass</li>
-                            <li>localStorage</li>
-                        </ul>
-                        <div className="featured-links">
-                            <div className="featured-link">Github</div>
-                            <div className="featured-link">Demo</div>
+                        <div className="featured-top">
+                            <p className="featured-subheading">Featured</p>
+                            <h2 className="featured-heading">trello.com Clone</h2>
+                            <p className="featured-description">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit sit ullam sapiente laboriosam fugiat culpa, vero esse fuga eveniet minus architecto animi at soluta assumenda omnis iusto. Porro, repudiandae esse.
+                            </p>
+                        </div>
+                        <div className="featured-bottom">
+                            <ul className="featured-tech">
+                                <li>React.js</li>
+                                <li>Sass</li>
+                                <li>localStorage</li>
+                            </ul>
+                            <div className="featured-links">
+                                <div className="featured-link">Github</div>
+                                <div className="featured-link">Demo</div>
+                            </div>
                         </div>
                     </div>
                 </div>

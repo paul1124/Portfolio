@@ -17,7 +17,7 @@ export default function Guestbook() {
     const [ postsPerPage, setPostsPerPage ] = useState(5);
 
     useEffect(() => {
-        window.scrollTo(0, 0);
+        // window.scrollTo(0, 0);
         axios.get('https://paulhong-portfolio.herokuapp.com/posts')
             .then(res => setPosts(res.data.map(post => post)))
             .catch(err => console.log(err));

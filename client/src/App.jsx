@@ -13,9 +13,9 @@ import './App.scss';
 
 function App() {
   const [ currentPage, setCurrentPage ] = useState('home');
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
 
   return (
     <div className="app">
@@ -36,7 +36,7 @@ function App() {
       <Home />
       <About />
       <Project />
-      <Experience />
+      {/* <Experience /> */}
       <Contact />
       <Footer />
     </div>

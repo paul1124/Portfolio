@@ -1,0 +1,36 @@
+@import '../../main.scss';
+
+.social {
+    z-index: 10000;
+    position: fixed;
+    bottom: 0;
+    left: 160px;
+}
+
+.social-links {
+    list-style-type: none;
+    margin: 0;
+    .social-link {
+        text-align: center;
+        width: 2em;
+        display: block;
+        font-size: 1.4em;
+        color: $eighth;
+        margin: 0.6em;
+        transition: 0.25s all ease-in-out;
+        &:hover {
+            color: $seventh;
+            transform: translateY(-0.15em);
+            transition: 0.25s all ease-in-out;
+        }
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 90px;
+        background-color: $eighth;
+        margin: 0px auto;
+    }
+}

@@ -22,7 +22,6 @@
     height: 10vh;
     position: relative;
     overflow: hidden;
-    background-color: $dark;
     z-index: 10;
 }
 
@@ -30,7 +29,6 @@
     height: inherit;
     display: flex;
     width: 100%;
-    background: $ldark;
     text-align: center;
     color: $altwhite;
     animation-name: text;

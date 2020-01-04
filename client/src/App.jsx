@@ -9,6 +9,7 @@ import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Guestbook from './components/Guestbook';
 import Footer from './components/Footer';
+import Social from './components/Social';
 import './App.scss';
 
 function App() {
@@ -19,7 +20,7 @@ function App() {
 
   return (
     <div className="app">
-      {/* <Nav currentPage={currentPage} setCurrentPage={setCurrentPage} /> */}
+      <Nav />
       {/* <AnimatedSwitch
         atEnter={{ opacity: 0 }}
         atLeave={{ opacity: 0 }}
@@ -33,6 +34,7 @@ function App() {
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/guestbook" component={Guestbook} />
       </AnimatedSwitch> */}
+      <Social />
       <Home />
       <About />
       <Project />

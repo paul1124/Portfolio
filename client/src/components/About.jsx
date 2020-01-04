@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '@mdi/react';
-import { mdiAirplay, mdiResponsive, mdiTelevisionGuide, mdiMonitorClean } from '@mdi/js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket, faMobileAlt, faPalette } from '@fortawesome/free-solid-svg-icons';
 import './styles/about.scss';
 import AboutImg from './images/about/main_pic.jpg';
 
@@ -20,19 +20,25 @@ const About = () => {
             </div>
             <div className="about-services">
                 <div className="about-service">
-                    <div className="about-service-icon"></div>
+                    <div className="about-service-icon">
+                        <FontAwesomeIcon icon={faMobileAlt} />
+                    </div>
                     <h2 className="about-service-title">Responsiveness</h2>
                     <hr/>
                     <p className="about-service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas similique libero dolorum velit quam.</p>
                 </div>
                 <div className="about-service">
-                    <div className="about-service-icon"></div>
+                    <div className="about-service-icon">
+                        <FontAwesomeIcon icon={faRocket} />
+                    </div>
                     <h2 className="about-service-title">Fast</h2>
                     <hr/>
                     <p className="about-service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas similique libero dolorum velit quam.</p>
                 </div>
                 <div className="about-service">
-                    <div className="about-service-icon"></div>
+                    <div className="about-service-icon">
+                        <FontAwesomeIcon icon={faPalette} />
+                    </div>
                     <h2 className="about-service-title">Design</h2>
                     <hr/>
                     <p className="about-service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae quas similique libero dolorum velit quam.</p>

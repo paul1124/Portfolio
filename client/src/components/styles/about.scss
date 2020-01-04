@@ -4,8 +4,7 @@
     position: relative;
     overflow: hidden;
     color: $eighth;
-    background-color: $second;
-    
+    z-index: 0;
 }
 
 .about-container {
@@ -42,12 +41,29 @@
     display: flex;
     width: 50%;
     margin: 3em auto;
+    margin-top: 6em;
     justify-content: space-around;
 
     .about-service {
         flex: 1;
         text-align: center;
-        border: 1px solid red;
+        &-icon {
+            font-size: 3em;
+            color: $eighth;
+        }
+        &-title {
+            font-size: 1.5em;
+            color: $eighth;
+        }
+        hr {
+            background-color: $eighth;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        &-description {
+            color: $eighth;
+        }
     }
 }
 // @keyframes backToRight {

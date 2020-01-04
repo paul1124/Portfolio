@@ -1,114 +1,44 @@
 @import '../../main.scss';
 
-@keyframes fadeFromTop {
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 .nav {
     position: fixed;
-    z-index: 100;
+    z-index: 10000;
     width: 100%;
-    color: $altwhite;
-    overflow: hidden;
     top: 0;
-    transition: top 0.3s;
-    // display: none;
-}
-.nav-main {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    transition: 0.5s all ease-in-out;
+    transition: all 0.25s ease-in-out;
+    background-color: $first;
+    // box-shadow: 0 20px 15px -15px rgba(0, 0, 0, 0.575);
 }
-.nav-link {
-    text-align: center;
+.nav-home {
     flex: 1;
-    color: red;
-    font-size: 1em;
-    opacity: 0;
-    // transform: translateY(-10em);
-    a {
-        color: white;
-        display: block;
-        text-decoration: none;
-        // padding: 1.5em 0;
-        text-transform: uppercase;
-        position: relative;
-        transition: 0.5s all ease-in-out;
-    }
-    animation-name: fadeFromTop;
-    animation-duration: 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
-    &:first-child {
-        animation-delay: none;
-    }
-    &:nth-child(n+2) {
-        animation-delay: 0.25s;
-    }
-    &:nth-child(n+3) {
-        animation-delay: 0.5s;
-    }
-    &:nth-child(n+4) {
-        animation-delay: 0.75s;
-    }
-    &:nth-child(n+5) {
-        animation-delay: 1s;
-    }
-    &:nth-child(n+6) {
-        animation-delay: 1.25s;
-    }
+    display: flex;
+    justify-content: space-evenly;
+    
 }
-.nav-small {
-    width: 100%;
-    transition: background 1s ease-in-out;
-    display: none;
-}
-.nav-small-list {
-    height: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 2em;
-    font-weight: 150;
-    transition: height 1s ease-in-out;
-    overflow: hidden;
-}
-.nav-small-button {
-    display: block;
-    margin: 0 auto;
-    background: none;
-    color: white;
-    border: none;
-    width: 100%;
-    padding: 0.25em;
-    font-size: 1.5em;
-    font-weight: 200;
-    border-bottom: 1px dotted white;
-    &:hover {
-        cursor: pointer;
-    }
-}
-.nav-small-link {
-    padding: 0.5em 0;
-}
-.nav-small-link:hover {
-    color: black;
-    background-color: white;
+.nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 
-@media only screen and (max-width: 1068px) {
-    .nav-link {
-        font-size: 0.75em;
+.navbar-link {
+    display: inline-block;
+    color: $eighth;
+    padding: 1em;
+    &-icon {
+        color: $fourth;
     }
- }
- @media only screen and (max-width: 735px) {
-    //  .ㅜ
-    .nav-main {
-        display: none;
+    &:hover {
+        color: $fourth;
+        transition: all 0.25s ease-in-out;
+        text-decoration: none;
     }
-    .nav-small {
-        display: initial;
-    }
- }
+}
+
+.at-top {
+    color: $eighth;
+    padding: 5em;
+    // box-shadow: 0 4px 2px -2px black;
+}

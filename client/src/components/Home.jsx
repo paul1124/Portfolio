@@ -4,6 +4,7 @@ import './styles/home.scss';
 const Home = () => {
     return (
         <section className="home" id="home">
+            <div className="home-image"></div>
             <div className="home-intro">
                 <h2 className="home-intro-content title">Paul Hong.</h2>
                 <h2 className="home-intro-content">I design and build web applications.</h2>

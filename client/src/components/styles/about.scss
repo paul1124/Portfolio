@@ -4,7 +4,8 @@
     position: relative;
     overflow: hidden;
     color: $eighth;
-    z-index: 0;
+    z-index: 1;
+    background-color: $first;
 }
 
 .about-container {

@@ -1,287 +1,120 @@
 @import '../../main.scss';
 
-.home {
-  height: 100vh;
-  display: flex;
-  color: white;
-  z-index: 0;
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes borderFadeIn {
+  100% {
+    opacity: 0.4;
+  }
 }
 
-
-.home-image {
-  z-index: 0;
-  position: fixed;
+.home {
+  background-image: linear-gradient(rgba(5, 5, 8, 0.905), rgba(5, 5, 8, 0.905)), url('../images/home/1.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  position: relative;
+}
+.home-intro-container {
+  position: relative;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(30, 30, 47, 0.891), rgba(30, 30, 47, 0.891)), url('../images/home/1.jpg');
-  background-size: cover;
-
+  // background: yellow;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .home-intro {
-  z-index: 10;
-  width: 40%;
-  margin: 0 auto;
-  align-self: center;
+  height: 100%;
+  width: 100%;
+  // background: green;
+  overflow: visible;
+}
+.home-svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  text-align: center;
+  transform: translateX(1.5em);
+  z-index: 0;
+  
+  opacity: 0;
+  animation-name: borderFadeIn;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
 
-  &-content {
-    font-size: 3em;
-    color: $eighth;
-    &.title {
-      font-size: 5em;
-      // line-height: 1em;
-    }
-  }
-  &-description {
-    margin-top: 2em;
-    width: 70%;
-  }
+.home-intro-main {
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0;
+}
 
-  &-contact {
-    display: inline-block;
-    color: $eighth;
-    padding: 0.5em 1.5em;
-    background-color: $third;
-    font-weight: 500;
-    border-radius: 5px;
-    &:hover {
-      transition: background-color 0.3s ease-in-out;
-      color: $eighth;
-      background-color: $fourth;
-      text-decoration: none;
-    }
+.home-intro-main {
+  .home-intro-content {
+    font-size: 4em;
   }
 }
-// // @media only screen and (max-width: 1068px) {}
-// @keyframes fadeFromBottom {
-//   100% {
-//     opacity: 1;
-//     transform: translateY(0);
-//   }
-// }
 
-// .home {
-//   position: relative;
-//   color: white;
-// }
+.home-intro-name {
+  color: $eighth;
+  font-size: 13em;
+  text-transform: uppercase;
+  line-height: 0.75em;
+  font-weight: 800;
+  margin-top: 0.3em;
+}
 
-// .home-content {
-//   width: 100%;
-//   height: 100vh;
-//   overflow: hidden;
-// }
+.home-intro-content {
+  &-1 {
+    color: $second;
+  }
+  &-2 {
+    color: $fourth;
+  }
+  &-3 {
+    color: $sixth;
+  }
+}
 
-// .home-image {
-//   z-index: 1;
-//   position: absolute;
-//   width: 100%;
-//   height: inherit;
-//   background-image: linear-gradient(rgba(68, 68, 68, 0.68), rgba(0, 0, 0, 0.68)), url('../images/main.jpeg');
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: none;
-//   opacity: 0;
-//   animation-name: fadeFromBottom;
-//   animation-delay: 0.25s;
-//   animation-duration: 1s;
-//   animation-iteration-count: 1;
-//   animation-fill-mode: forwards;
-  
-// }
-
-// .home-main {
-//   position: relative;
-//   width: 100%;
-//   height: inherit;
-//   z-index: 2;
-//   // border: 1px solid white;
-// }
-
-// @keyframes toRight {
-//   100% {
-//     right: 0;
-//   }
-// }
-// @keyframes toLeft {
-//   100% {
-//     left: 0;
-//   }
-// }
-// @keyframes toTop {
-//   100% {
-//     top: 0;
-//   }
-// }
-// @keyframes toBottom {
-//   100% {
-//     bottom: 0;
-//   }
-// }
-
-// .home-intro-border {
-//   width: 50%;
-//   margin: 0 auto;
-//   margin-top: 10em;
-//   height: 25em;
-//   position: relative;
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     height: 1px;
-//     background-color: white;
-//     top: 0;
-//     left: 0;
-//     right: 100%;
-//     animation-name: toRight;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//     animation-delay: 0;
-//   }
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     height: 1px;
-//     background-color: white;
-//     bottom: 0;
-//     left: 100%;
-//     right: 0;
-//     animation-name: toLeft;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//     animation-delay: 0;
-//   }
-// }
-// @media only screen and (max-width: 1068px) {
-//   .home-intro-border {
-//     width: 75%;
-//   }
-// }
-
-// .home-intro {
-//   width: 100%;
-//   height: inherit;
-//   text-transform: uppercase;
-//   text-align: center;
-//   display: flex;
-//   position: relative;
-//   &::before {
-//     content: '';
-//     position: absolute;
-//     width: 1px;
-//     background-color: white;
-//     top: 0;
-//     bottom: 100%;
-//     right: 0;
-//     animation-name: toBottom;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//     animation-delay: 1s;
-//   }
-//   &::after {
-//     content: '';
-//     position: absolute;
-//     width: 1px;
-//     background-color: white;
-//     bottom: 0;
-//     top: 100%;
-//     left: 0;
-//     animation-name: toTop;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//     animation-delay: 1s;
-//   }
-//   &-block {
-//     align-self: center;
-//     margin: 0 auto;
-//   }
-
-//   .home-name, .home-title {
-//     display: block;
-//     font-weight: 200;
-//     margin: 1em 0;
-//     font-size: 2em;
-//   }
-//   .home-name {
-//     opacity: 0;
-//     transform: translateY(1em);
-//     animation-name: fadeFromBottom;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//     animation-delay: 2s;
-//   }
-//   .home-title {
-//     font-size: 1em;
-//     opacity: 0;
-//     transform: translateY(1em);
-//     animation-name: fadeFromBottom;
-//     animation-duration: 1s;
-//     animation-fill-mode: forwards;
-//     animation-iteration-count: 1;
-//     animation-delay: 2.5s;
-//   }
-// }
-// .home-link-container {
-//   display: flex;
-//   justify-content: space-between;
-//   margin: 0 auto;
-//   margin-top: 4em;
-//   width: 50%;
-// }
-// @media only screen and (max-width: 1068px) {
-//   .home-link-container {
-//     width: 75%;
-//   }
-// }
-// @media only screen and (max-width: 735px) {
-//   .home-link-container {
-//     margin-top: 2em;
-//   }
-// }
-// .home-link {
-//   opacity: 0;
-//   transform: translateY(1em);
-//   font-size: 2.5em;
-//   text-align: center;
-//   color: white;
-//   display: block;
-//   text-decoration: none;
-//   animation-name: fadeFromBottom;
-//   animation-duration: 1s;
-//   animation-iteration-count: 1;
-//   animation-fill-mode: forwards;
-//   &:first-child {
-//     animation-delay: 2.75s;
-//   }
-//   &:nth-child(n+2) {
-//     animation-delay: 3s;
-//   }
-//   &:nth-child(n+3) {
-//     animation-delay: 3.25s;
-//   }
-//   &:nth-child(n+4) {
-//     animation-delay: 3.5s;
-//   }
-//   // animation-delay: 2.5s;
-//   &-name {
-//     font-size: 0.3em;
-//     text-transform: uppercase;
-//     opacity: 0;
-//     transition: opacity 0.25s ease-in-out;
-//     font-weight: 100;
-//   }
-//   &:hover {
-//     // i {
-//       // color: red;
-//       text-decoration: none;
-//       color: white;
-//     // }
-//     .home-link-name {
-//       opacity: 1;
-//     }
-//   }
-// }
+.home-intro-contact {
+  color: $eighth;
+  text-align: center;
+  display: inline-block;
+  width: 9em;
+  height: 4em;
+  margin: 3em auto;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $fourth;
+  border-radius: 10px;
+  border: 3px solid $fourth;
+  transition: background-color 0.25s ease-in-out;
+  // transform: translateX(-1.75em);
+  &:hover {
+    transition: background-color 0.25s ease-in-out;
+    background: none;
+    color: $eighth;
+    text-decoration: none;;
+  }
+}

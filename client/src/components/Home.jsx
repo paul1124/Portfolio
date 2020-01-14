@@ -1,16 +1,60 @@
 import React from 'react';
+import { Carousel } from 'react-bootstrap';
+import img from './images/home/drawsvg.svg';
+import svgg from './images/home/2.svg';
 import './styles/home.scss';
 
 const Home = () => {
     return (
         <section className="home" id="home">
-            <div className="home-image"></div>
-            <div className="home-intro">
-                <h2 className="home-intro-content title">Paul Hong.</h2>
+            <Carousel 
+                interval={null} 
+                className="home-intro-container">
+
+                <Carousel.Item className="home-intro">
+                    <img className="d-block w-100 home-svg" src={svgg} />
+                    
+                    <Carousel.Caption className="home-intro-main">
+                    
+                        <h2 className="home-intro-name">Paul Hong</h2>
+                        <h2 className="home-intro-content">
+                            <span className="home-intro-content-1">Web Design</span>,
+                            <span className="home-intro-content-2">Marketing</span>,
+                            <span className="home-intro-content-3">Application</span>
+                        </h2>
+                        {/* <p className="home-intro-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, praesentium! Quis enim recusandae reprehenderit cum!</p> */}
+                        <a href="#home" className="home-intro-contact">Get Started</a>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+                <Carousel.Item className="home-intro">
+                    <img className="d-block w-100 home-svg" src={img} />
+                    <Carousel.Caption className="home-intro-main">
+                        <h2 className="home-intro-content title">Online Marketing</h2>
+                        <h2 className="home-intro-content">I design and build web applications.</h2>
+                        <p className="home-intro-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, praesentium! Quis enim recusandae reprehenderit cum!</p>
+                        <a href="#home" className="home-intro-contact">Contact</a>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+                <Carousel.Item className="home-intro">
+                    <img className="d-block w-100 home-svg" src={img} />
+                    <Carousel.Caption className="home-intro-main">
+                        <h2 className="home-intro-content title">Online Marketing</h2>
+                        <h2 className="home-intro-content">I design and build web applications.</h2>
+                        <p className="home-intro-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, praesentium! Quis enim recusandae reprehenderit cum!</p>
+                        <a href="#home" className="home-intro-contact">Contact</a>
+                    </Carousel.Caption>
+                </Carousel.Item>
+
+            </Carousel>
+            {/* <div className="home-intro">
+                <img className="home-svg" src={img} />
+                <h2 className="home-intro-content title">Online Marketing</h2>
                 <h2 className="home-intro-content">I design and build web applications.</h2>
                 <p className="home-intro-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, praesentium! Quis enim recusandae reprehenderit cum!</p>
                 <a href="#home" className="home-intro-contact">Contact</a>
-            </div>
+            </div> */}
         </section>
     )
 }

@@ -1,10 +1,13 @@
 @import '../../main.scss';
 
 .contact {
+    position: relative;
     z-index: 1;
+    overflow: hidden;
 }
 
 .contact-container {
+    z-index: 10;
     margin: 5em auto;
     color: white;
     text-align: center;

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCaretUp, faAd } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import svgg from './images/home/22.svg';
 import './styles/nav.scss';
 
 const linkStyle = {
@@ -36,7 +37,10 @@ const listener = e => {
         document.getElementById("nav").style.boxShadow = '0 20px 15px -15px rgba(0, 0, 0, 0.575)'
         :
         document.getElementById("nav").style.boxShadow = 'none'
-        
+    currentScrollPos != 0 ? 
+        document.getElementById("nav").style.backgroundColor = 'rgb(30, 30, 47)'
+        :
+        document.getElementById("nav").style.backgroundColor = 'rgba(30, 30, 47, 0.403)'
     if(currentScrollPos < 70) {
         document.getElementById("nav").style.top = "0";
     }
@@ -67,6 +71,7 @@ const Nav = () => {
     return (
         <nav className="nav" id="nav">
             <div className="nav-home">
+                <img id="nav-home-svg" src={svgg} />
                 <a href="home" id="nav-home" className="navbar-link">PH</a>
             </div>
             <div className="nav-links">
